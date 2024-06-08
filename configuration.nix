@@ -195,13 +195,9 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  programs.zsh.enable = true; 
+  environment.pathsToLink = [ "/share/zsh" ];
 
-  programs.zsh = {
-    enable = true;
-    syntaxHighlighting.enable = true;
-    autosuggestions.enable = true;
-  };
-  
   users.defaultUserShell = pkgs.zsh;
 
   programs.tmux = {
