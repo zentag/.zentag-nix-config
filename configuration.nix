@@ -27,10 +27,8 @@
     du-dust
     eza
     fastfetch
-    fastfetch
     fd
     fzf
-    fzf-git-sh
     gh
     git
     gnomeExtensions.coverflow-alt-tab
