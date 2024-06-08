@@ -49,6 +49,16 @@
           sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
         };
       }
+      {
+        name = "fzf-git-sh";
+        file = "fzf-git.sh";
+        src = pkgs.fetchFromGitHub {
+          owner = "junegunn";
+          rev = "bd8ac4ba4c9d7d12b34f7fa2b0d334f50cdb5254";
+          repo = "fzf-git.sh";
+          sha256 = "sha256-ZYgov/P7fcB1Zjj5UMVbr7+bjRKLwzpqddHBOCNd+RQ=";
+        };
+      }
     ];
   };
   programs.fzf = {
