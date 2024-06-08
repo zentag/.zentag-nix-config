@@ -15,7 +15,7 @@
       update-sys="sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/";
       update-user="home-manager switch --flake ~/.zentag-nix-config/";
       update-lock="cd ~/.zentag-nix-config/ && nix flake update";
-      update="update-lock && update-sys && update-user && cd ~/.zentag-nix-config && git add . && git commit -m 'autoupdate' && git push origin";
+      update="olddir=$(pwd) && update-lock && update-sys && update-user && cd ~/.zentag-nix-config && git add . && git commit -m 'autoupdate' && git push origin && cd olddir";
       ff="fastfetch";
       fk="fuck";
     };
