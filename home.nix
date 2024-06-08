@@ -24,6 +24,7 @@
       gc="git commit";
       gch="git checkout";
       gd="git diff";
+      galias="alias | grep -oE 'g[a-z]=.?*'";
       ff="fastfetch";
       fk="fuck";
     };
