@@ -8,14 +8,15 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
-      nix-config="nvim ~/.nix-files/configuration.nix && sudo nixos-rebuild switch --flake ~/.nix-files/";
-      zsh-config="nvim ~/.zshrc && source ~/.zshrc";
+      nix-config="nvim ~/.zentag-nix-config/configuration.nix && sudo nixos-rebuild switch --flake ~/.nix-files/";
       ls="eza --width=75 --hyperlink --color=always --git --icons=always";
       cd="z";
       kali="quickemu --vm kali-kali-weekly.conf --display spice";
-      update-sys="sudo nixos-rebuild switch --upgrade --flake ~/.nix-files/";
-      update-user="home-manager switch --flake ~/.nix-files/";
-      update-lock="cd ~/.nix-files/ && nix flake update";
+      update-sys="sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/";
+      update-user="home-manager switch --flake ~/.zentag-nix-config/";
+      update-lock="cd ~/.zentag-nix-config/ && nix flake update";
+      update="update-lock && update-sys && update-user && git add . && git commit -m 'autoupdate' && git push origin";
+      ff="fastfetch";
       fk="fuck";
     };
     enableCompletion = true;
