@@ -34,6 +34,7 @@
     gh
     git
     gnomeExtensions.coverflow-alt-tab
+    gnomeExtensions.gsconnect
     gnomeExtensions.noannoyance-fork
     gnomeExtensions.tiling-assistant
     identity

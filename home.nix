@@ -8,7 +8,7 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
-      nix-config="nvim ~/.zentag-nix-config/configuration.nix && sudo nixos-rebuild switch --flake ~/.nix-files/";
+      nix-config="nvim ~/.zentag-nix-config/configuration.nix && sudo nixos-rebuild switch --flake ~/.zentag-nix-config/";
       ls="eza --width=75 --hyperlink --color=always --git --icons=always";
       cd="z";
       kali="quickemu --vm kali-kali-weekly.conf --display spice";
