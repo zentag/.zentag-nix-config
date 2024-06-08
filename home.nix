@@ -8,7 +8,6 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
-      nix-config="nvim ~/.zentag-nix-config/configuration.nix && sudo nixos-rebuild switch --flake ~/.zentag-nix-config/";
       ls="eza --width=75 --hyperlink --color=always --git --icons=always";
       cd="z";
       kali="quickemu --vm kali-kali-weekly.conf --display spice";
@@ -16,6 +15,8 @@
       update-user="home-manager switch --flake ~/.zentag-nix-config/";
       update-lock="cd ~/.zentag-nix-config/ && nix flake update";
       update="olddir=$(pwd) && update-lock && update-sys && update-user && cd ~/.zentag-nix-config && git add . && git commit -m 'autoupdate' && git push origin & cd $olddir";
+      home-config="nvim ~/.zentag-nix-config/home.nix && update-user && echo 'You should git commit now!!!'";
+      nix-config="nvim ~/.zentag-nix-config/configuration.nix && sudo nixos-rebuild switch --flake ~/.zentag-nix-config/ && echo 'You should git commit now!!!'";
       ff="fastfetch";
       fk="fuck";
     };
@@ -31,6 +32,16 @@
         name = "zsh-powerlevel10k";
         src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
         file = "powerlevel10k.zsh-theme";
+      }
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.8.0";
+          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
+        };
       }
     ];
   };
