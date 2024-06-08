@@ -15,8 +15,8 @@
       update-user="home-manager switch --flake ~/.zentag-nix-config/";
       update-lock="cd ~/.zentag-nix-config/ && nix flake update";
       update="olddir=$(pwd) && update-lock && update-sys && update-user && cd ~/.zentag-nix-config && git add . && git commit -m 'autoupdate' && git push origin & cd $olddir";
-      home-config="nvim ~/.zentag-nix-config/home.nix && update-user && echo 'You should git commit now!!!' && source ~/.zshrc && cd ~/.zentag-nix-config";
-      nix-config="nvim ~/.zentag-nix-config/configuration.nix && sudo nixos-rebuild switch --flake ~/.zentag-nix-config/ && echo 'You should git commit now!!!' && cd ~/.zentag-nix-config/";
+      home-config="nvim ~/.zentag-nix-config/home.nix && update-user && source ~/.zshrc && tput setaf 1; echo 'You should git commit now!!!' && cd ~/.zentag-nix-config";
+      nix-config="nvim ~/.zentag-nix-config/configuration.nix && sudo nixos-rebuild switch --flake ~/.zentag-nix-config/ && tput setaf 1; echo 'You should git commit now!!!' && cd ~/.zentag-nix-config/";
       ga="git add .";
       gp="git push origin";
       gf="git pull";
