@@ -93,7 +93,24 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    gnome.tali
+    blanket
+    carla
+    deluged
+    drumgizmo
+    gnomeExtensions.coverflow-alt-tab
+    gnomeExtensions.gsconnect
+    gnomeExtensions.noannoyance-fork
+    gnomeExtensions.tiling-assistant
+    identity
+    librewolf
+    musescore
+    obs-studio
+    reaper
+    sfizz
+    synthv1
+    tunefish
+    vital
+    vscode
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -142,6 +159,8 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+  
+  nixpkgs.config.allowUnfree = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

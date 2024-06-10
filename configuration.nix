@@ -16,14 +16,9 @@
       python-pkgs.pynvim
     ]))
     bat
-    blanket
     btop
-    carla
     deja-dup
     delta
-    deluged
-    drawing
-    drumgizmo
     du-dust
     eza
     fastfetch
@@ -31,35 +26,19 @@
     fzf
     gh
     git
-    gnomeExtensions.coverflow-alt-tab
-    gnomeExtensions.gsconnect
-    gnomeExtensions.noannoyance-fork
-    gnomeExtensions.tiling-assistant
-    identity
-    librewolf
-    musescore
     neovim
     nodejs
-    obs-studio
-    powertop
     python311Packages.pynvim
     python311Packages.pynvim-pp
     python311Packages.python-lsp-server
     qemu
     quickemu
-    reaper
     ripgrep
-    sfizz
     silver-searcher
-    socat
-    synthv1
     thefuck
     tlrc
-    tunefish
     vim-language-server
     vimPlugins.coq_nvim
-    vital
-    vscode
     w3m
     wl-clipboard
     yarn
