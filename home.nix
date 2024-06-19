@@ -87,6 +87,22 @@
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
+  dconf = {
+    enable = true;
+    settings."org/gnome/shell" = {
+      disable-user-extensions = false;
+      enabled-extensions = with pkgs.gnomeExtensions; [
+        blur-my-shell.extensionUuid
+        burn-my-windows.extensionUuid
+        clipboard-history.extensionUuid
+        gsconnect.extensionUuid
+        noannoyance-fork.extensionUuid
+        tiling-assistant.extensionUuid
+        vitals.extensionUuid
+      ];
+    };
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -97,10 +113,13 @@
     carla
     deluged
     drumgizmo
-    gnomeExtensions.coverflow-alt-tab
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.burn-my-windows
+    gnomeExtensions.clipboard-history
     gnomeExtensions.gsconnect
     gnomeExtensions.noannoyance-fork
     gnomeExtensions.tiling-assistant
+    gnomeExtensions.vitals
     identity
     librewolf
     musescore
