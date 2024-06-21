@@ -30,6 +30,7 @@
     drumgizmo
     gnomeExtensions.blur-my-shell
     gnomeExtensions.burn-my-windows
+    gnomeExtensions.caffeine
     gnomeExtensions.clipboard-history
     gnomeExtensions.gsconnect
     gnomeExtensions.noannoyance-fork

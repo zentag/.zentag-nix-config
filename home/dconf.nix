@@ -8,6 +8,7 @@
         enabled-extensions = with pkgs.gnomeExtensions; [
           blur-my-shell.extensionUuid
           burn-my-windows.extensionUuid
+          caffeine.extensionUuid
           clipboard-history.extensionUuid
           gsconnect.extensionUuid
           noannoyance-fork.extensionUuid
