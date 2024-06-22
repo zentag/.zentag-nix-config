@@ -29,6 +29,7 @@
     neovim
     ventoy
     nodejs
+    pciutils
     python311Packages.pynvim
     python311Packages.pynvim-pp
     python311Packages.python-lsp-server
@@ -38,6 +39,7 @@
     silver-searcher
     thefuck
     tlrc
+    usbutils
     vim-language-server
     vimPlugins.coq_nvim
     w3m
