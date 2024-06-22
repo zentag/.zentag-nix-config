@@ -27,6 +27,7 @@
     gh
     git
     neovim
+    ventoy
     nodejs
     python311Packages.pynvim
     python311Packages.pynvim-pp
