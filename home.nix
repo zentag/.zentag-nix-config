@@ -26,8 +26,8 @@
     # pkgs.hello
     blanket
     carla
-    deluged
     drumgizmo
+    fragments
     gnomeExtensions.blur-my-shell
     gnomeExtensions.burn-my-windows
     gnomeExtensions.caffeine
@@ -37,6 +37,7 @@
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
     identity
+    kdenlive
     librewolf
     musescore
     obs-studio
