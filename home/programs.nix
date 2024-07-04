@@ -16,6 +16,7 @@
         gf="git pull";
         gp="git push origin";
         gs="git status";
+        gr="git restore";
         home-config="nvim ~/.zentag-nix-config/home.nix && update-user && source ~/.zshrc && tput setaf 1; echo 'You should git commit now!!!' && cd ~/.zentag-nix-config";
         kali="quickemu --vm kali-kali-weekly.conf --display spice";
         ls="eza --width=75 --hyperlink --color=always --git --icons=always";
