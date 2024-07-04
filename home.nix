@@ -26,6 +26,7 @@
     # pkgs.hello
     blanket
     carla
+    ciscoPacketTracer8
     drumgizmo
     fragments
     gnomeExtensions.blur-my-shell
