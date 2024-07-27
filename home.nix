@@ -24,7 +24,9 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
+    asciiquarium
     blanket
+    bottom
     carla
     ciscoPacketTracer8
     drumgizmo
@@ -40,12 +42,14 @@
     identity
     kdenlive
     librewolf
+    mc
     musescore
     obs-studio
     reaper
     sfizz
     synthv1
     textpieces
+    toipe
     tunefish
     vital
     vscode
