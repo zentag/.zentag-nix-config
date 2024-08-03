@@ -9,6 +9,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+  # weird fix
+  systemd.network.wait-online.enable = false;
+  boot.initrd.systemd.network.wait-online.enable = false;
   # nix search wget
   environment.systemPackages = with pkgs; [
     (python3.withPackages (python-pkgs: [
