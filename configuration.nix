@@ -119,8 +119,7 @@
 
   # Configure keymap in X11
   services.xserver = {
-    xkb = {layout = "us";
-    variant = "dvorak";};
+    xkb = {layout = "us";};
   };
 
   # Enable CUPS to print documents.
