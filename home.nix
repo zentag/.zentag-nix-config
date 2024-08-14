@@ -50,6 +50,7 @@
     textpieces
     toipe
     tunefish
+    ungoogled-chromium
     vital
     vscode
     # # It is sometimes useful to fine-tune packages, for example, by applying
