@@ -30,6 +30,7 @@
     fzf
     gh
     git
+    gnome.gnome-remote-desktop
     neovim
     ventoy
     nodejs
@@ -120,6 +121,12 @@
   # Configure keymap in X11
   services.xserver = {
     xkb = {layout = "us";};
+  };
+  
+  services.xrdp = {
+    enable = true;
+    openFirewall = true;
+    defaultWindowManager = "gnome-remote-desktop";
   };
 
   # Enable CUPS to print documents.
