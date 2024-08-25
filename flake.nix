@@ -17,7 +17,7 @@
     lib = nixpkgs.lib;
   in {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      zens-good-laptop = lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
