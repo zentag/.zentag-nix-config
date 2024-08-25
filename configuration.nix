@@ -12,13 +12,10 @@
 
   # weird fix
   systemd.network.wait-online.enable = false;
+
   boot.initrd.systemd.network.wait-online.enable = false;
   # nix search wget
   environment.systemPackages = with pkgs; [
-    (python3.withPackages (python-pkgs: [
-      # select Python packages here
-      python-pkgs.pynvim
-    ]))
     bat
     btop
     deja-dup
@@ -35,11 +32,9 @@
     ventoy
     nodejs
     pciutils
-    python311Packages.pynvim
-    python311Packages.pynvim-pp
-    python311Packages.python-lsp-server
-    qemu
-    quickemu
+    python312Packages.pynvim
+    python312Packages.pynvim-pp
+    python312Packages.python-lsp-server
     ripgrep
     silver-searcher
     thefuck

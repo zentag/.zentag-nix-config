@@ -40,7 +40,7 @@
     gnomeExtensions.vitals
     identity
     kdenlive
-    librewolf
+    # librewolf
     mc
     musescore
     obs-studio
