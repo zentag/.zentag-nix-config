@@ -17,13 +17,13 @@
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    android-studio
     asciiquarium
     blanket
     bottom
@@ -39,7 +39,6 @@
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
     identity
-    jetbrains.idea-community-bin
     kdenlive
     # librewolf
     mc
