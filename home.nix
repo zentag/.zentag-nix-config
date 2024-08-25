@@ -45,6 +45,7 @@
     mc
     musescore
     obs-studio
+    qbittorrent
     reaper
     sfizz
     synthv1
