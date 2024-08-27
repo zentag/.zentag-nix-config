@@ -60,6 +60,7 @@
           };
         }
       ];
+      initExtra = "export ANDROID_HOME=$HOME/Android/Sdk \nexport PATH=$PATH:$ANDROID_HOME/emulator \nexport PATH=$PATH:$ANDROID_HOME/platform-tools";
     };
     fzf = {
       enable = true;
