@@ -9,8 +9,13 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+        url = "github:nix-community/nixvim";
+        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, musnix, home-manager, ... }: 
+  outputs = { self, nixpkgs, musnix, home-manager, ... } @ inputs: 
   let 
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -30,6 +35,7 @@
         inherit pkgs;
         modules = [
           ./home.nix
+	  inputs.nixvim.homeManagerModules.nixvim
         ];
       };
       
