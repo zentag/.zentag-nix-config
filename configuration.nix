@@ -23,7 +23,7 @@
     fzf
     gh
     git
-    gnome.gnome-remote-desktop
+    gnome-remote-desktop
     neovim
     ventoy
     nodejs
