@@ -48,6 +48,7 @@
     qbittorrent
     reaper
     sfizz
+    stow
     synthv1
     textpieces
     toipe
