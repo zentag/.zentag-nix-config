@@ -28,7 +28,6 @@
     gh
     git
     gnome-remote-desktop
-    neovim
     ventoy
     nodejs
     pciutils
