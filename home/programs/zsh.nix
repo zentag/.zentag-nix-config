@@ -62,6 +62,7 @@
           };
         }
       ];
+      initExtra = "~/.zentag-nix-config/home/programs/starttmux.sh";
     };
     fzf = {
       enable = true;
