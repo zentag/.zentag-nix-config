@@ -1,14 +1,14 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+{ config
+, pkgs
+, ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # weird fix
   systemd.network.wait-online.enable = false;
@@ -48,7 +48,7 @@
     zoxide
   ];
   virtualisation.waydroid.enable = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   musnix = {
     enable = true;
@@ -66,12 +66,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  hardware.enableAllFirmware = true; 
- 
+  hardware.enableAllFirmware = true;
+
   hardware.bluetooth = {
-      enable = true;
-      powerOnBoot = true;
-   };
+    enable = true;
+    powerOnBoot = true;
+  };
 
   networking.hostName = "zens-good-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -103,7 +103,7 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   services.flatpak.enable = true;
 
   # Enable the X11 windowing system.
@@ -115,9 +115,9 @@
 
   # Configure keymap in X11
   services.xserver = {
-    xkb = {layout = "us";};
+    xkb = { layout = "us"; };
   };
-  
+
   services.xrdp = {
     enable = true;
     openFirewall = true;
@@ -144,7 +144,7 @@
       AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
       UseDns = true;
       X11Forwarding = false;
-      PermitRootLogin = "prohibit-password"; 
+      PermitRootLogin = "prohibit-password";
     };
   };
 
@@ -174,18 +174,18 @@
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     packages = with pkgs; [
       firefox
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
   users.users.noah = {
-    isNormalUser  = true;
-    home  = "/home/noah";
+    isNormalUser = true;
+    home = "/home/noah";
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  programs.zsh.enable = true; 
+  programs.zsh.enable = true;
   environment.pathsToLink = [ "/share/zsh" ];
 
   users.defaultUserShell = pkgs.zsh;
@@ -216,7 +216,7 @@
       # Cool trick: Let's dim out any pane that's not active.
       set-window-option -g window-style fg=white,bg=colour234
       set-window-option -g window-active-style fg=white,bg=colour235
-      
+
       # Command / Message line
       set-window-option -g message-style fg=black,bold,bg=colour11
 
@@ -228,11 +228,8 @@
       set-window-option -g window-status-separator ' | '
 
       # https://old.reddit.com/r/tmux/comments/mesrci/tmux_2_doesnt_seem_to_use_256_colors/
-      # set -g default-terminal "xterm-256color"
-      set -ga terminal-overrides ",*256col*:Tc"
-      set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
-      set-environment -g COLORTERM "truecolor"
-
+      set -g default-terminal "screen-256color"
+      set-option -sa terminal-overrides ",xterm*:Tc"
       # Mouse works as expected
       set-option -g mouse on
       # easy-to-remember split pane commands
@@ -240,30 +237,8 @@
       bind - split-window -v -c "#{pane_current_path}"
       bind c new-window -c "#{pane_current_path}"
 
-      # vim arrow commands
-      bind -r h select-pane -L
-      bind -r j select-pane -D 
-      bind -r k select-pane -U
-      bind -r l select-pane -R
-
-      bind -r C-h resize-pane -L
-      bind -r C-j resize-pane -D
-      bind -r C-k resize-pane -U
-      bind -r C-l resize-pane -R
-
-      # unbind arrows
-      unbind Up
-      unbind Down
-      unbind Left
-      unbind Right
-      unbind C-Up
-      unbind C-Down
-      unbind C-Right
-      unbind C-Left
     '';
   };
-  
-  
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -291,5 +266,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }
