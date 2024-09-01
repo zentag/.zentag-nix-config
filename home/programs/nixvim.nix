@@ -39,6 +39,14 @@
         enable = true;
         settings.current_line_blame = true;
       };
+      mkdnflow = {
+        enable = true;
+        tables = {
+          autoExtendCols = true;
+          autoExtendRows = true;
+          formatOnMove = true;
+        };
+      };
       # Language server
       lsp = {
         enable = true;
