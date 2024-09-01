@@ -6,6 +6,7 @@
     zsh = {
       enable = true;
       shellAliases = {
+        n = "nvim";
         c = "~/.zentag-nix-config/helpers/config.sh";
         cd = "z";
         ff = "fastfetch";
