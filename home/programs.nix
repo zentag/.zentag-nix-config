@@ -16,10 +16,10 @@
         gp = "git push origin";
         gs = "git status";
         gr = "git restore";
-        home-config = "nvim ~/.zentag-nix-config/home.nix && update-user && source ~/.zshrc && tput setaf 1; echo 'You should git commit now!!!' && cd ~/.zentag-nix-config";
+        home-config = "nvim ~/.zentag-nix-config && update-user && source ~/.zshrc && tput setaf 1; echo 'You should git commit now!!!' && cd ~/.zentag-nix-config";
         kali = "quickemu --vm kali-kali-weekly.conf --display spice";
         ls = "eza --width=75 --hyperlink --color=always --git --icons=always";
-        nix-config = "nvim ~/.zentag-nix-config/configuration.nix && sudo nixos-rebuild switch --flake ~/.zentag-nix-config/ && tput setaf 1; echo 'You should git commit now!!!' && cd ~/.zentag-nix-config/";
+        nix-config = "nvim ~/.zentag-nix-config/ && sudo nixos-rebuild switch --flake ~/.zentag-nix-config/ && tput setaf 1; echo 'You should git commit now!!!' && cd ~/.zentag-nix-config/";
         update-lock = "cd ~/.zentag-nix-config/ && nix flake update";
         update-sys = "sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/";
         update-user = "home-manager switch --flake ~/.zentag-nix-config/";
