@@ -208,6 +208,7 @@
       luasnip.enable = true;
       trouble.enable = true;
       nvim-autopairs.enable = true;
+      surround.enable = true;
     };
     extraConfigLua = ''
         luasnip = require("luasnip")
