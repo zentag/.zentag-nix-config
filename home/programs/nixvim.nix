@@ -207,7 +207,6 @@
       lualine.enable = true;
       luasnip.enable = true;
       trouble.enable = true;
-      nvim-ufo.enable = true;
       nvim-autopairs.enable = true;
     };
     extraConfigLua = ''
