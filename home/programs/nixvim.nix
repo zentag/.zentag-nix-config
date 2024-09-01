@@ -36,7 +36,6 @@
         enable = true;
         settings.current_line_blame = true;
       };
-      statuscol.enable = true;
       fugitive.enable = true;
       # Language server
       lsp = {
