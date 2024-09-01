@@ -37,6 +37,7 @@
         settings.current_line_blame = true;
       };
       flash.enable = true;
+      statuscol.enable = true;
       fugitive.enable = true;
       # Language server
       lsp = {
@@ -206,6 +207,7 @@
       lualine.enable = true;
       luasnip.enable = true;
       trouble.enable = true;
+      nvim-ufo.enable = true;
       nvim-autopairs.enable = true;
     };
     extraConfigLua = ''
