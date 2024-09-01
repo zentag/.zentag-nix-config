@@ -1,7 +1,4 @@
-{ config
-, pkgs
-, ...
-}: {
+{
   programs.nixvim = {
     enable = true;
     opts = {
@@ -9,6 +6,12 @@
       relativenumber = true; # Show relative line numbers
       shiftwidth = 2; # Tab width should be 2
     };
+    keymaps = [
+      {
+        action = "<cmd>Trouble<CR>";
+        key = "<C-t>";
+      }
+    ];
     autoCmd = [
       {
         command = "lua vim.lsp.buf.format({ async = false })";
@@ -72,14 +75,14 @@
         };
       };
       neo-tree.enable = true;
-      fzf-lua = {
+      telescope = {
         enable = true;
         keymaps = {
           "<leader>fg" = "live_grep";
+          "<leader>f" = "find_files";
+          "<leader>m" = "media_files";
         };
-      };
-      telescope = {
-        enable = true;
+        extensions.media-files.enable = true;
       };
       none-ls = {
         enable = true;
@@ -200,10 +203,15 @@
         };
       };
       treesitter.enable = true;
-      markdown-preview.enable = true;
+      markdown-preview = {
+        enable = true;
+        settings.auto_start = true;
+      };
       lualine.enable = true;
       luasnip.enable = true;
-      trouble.enable = true;
+      trouble = {
+        enable = true;
+      };
       nvim-autopairs.enable = true;
       surround.enable = true;
     };
