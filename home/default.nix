@@ -1,7 +1,6 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   imports = [
-    ./programs.nix
+    ./programs
     ./dconf.nix
     ./services.nix
   ];
