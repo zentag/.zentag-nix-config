@@ -52,7 +52,7 @@
         enable = true;
         servers = {
           # Average webdev LSPs
-          tsserver.enable = true; # TS/JS
+          ts-ls.enable = true; # TS/JS
           cssls.enable = true; # CSS
           tailwindcss.enable = true; # TailwindCSS
           html.enable = true; # HTML
@@ -61,21 +61,21 @@
           vuels.enable = false; # Vue
           pyright.enable = true; # Python
           marksman.enable = true; # Markdown
-          nil-ls.enable = true; # Nix
+          nil_ls.enable = true; # Nix
           dockerls.enable = true; # Docker
           bashls.enable = true; # Bash
           clangd.enable = true; # C/C++
-          csharp-ls.enable = true; # C#
+          csharp_ls.enable = true; # C#
           yamlls.enable = true; # YAML
 
-          lua-ls = {
+          lua_ls = {
             # Lua
             enable = true;
             settings.telemetry.enable = false;
           };
 
           # Rust
-          rust-analyzer = {
+          rust_analyzer = {
             enable = true;
             installRustc = true;
             installCargo = true;
@@ -92,6 +92,7 @@
         };
         extensions.media-files.enable = true;
       };
+      web-devicons.enable = true;
       none-ls = {
         enable = true;
         settings = {
@@ -213,7 +214,7 @@
       treesitter.enable = true;
       markdown-preview = {
         enable = true;
-        settings.auto_start = true;
+        settings.auto_start = 1;
       };
       lualine.enable = true;
       luasnip.enable = true;
@@ -221,7 +222,7 @@
         enable = true;
       };
       nvim-autopairs.enable = true;
-      surround.enable = true;
+      vim-surround.enable = true;
     };
     extraConfigLua = ''
         luasnip = require("luasnip")
