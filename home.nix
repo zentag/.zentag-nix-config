@@ -24,7 +24,6 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    android-studio
     asciiquarium
     blanket
     bottom
@@ -53,7 +52,6 @@
     synthv1
     textpieces
     toipe
-    tunefish
     ungoogled-chromium
     vital
     vscode
