@@ -40,7 +40,6 @@
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
     identity
-    bottles
     kdenlive
     # librewolf
     mc
