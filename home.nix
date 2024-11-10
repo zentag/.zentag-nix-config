@@ -24,6 +24,7 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
+    # librewolf
     asciiquarium
     blanket
     bottom
@@ -41,7 +42,7 @@
     gnomeExtensions.vitals
     identity
     kdenlive
-    # librewolf
+    kicad
     mc
     musescore
     obs-studio
