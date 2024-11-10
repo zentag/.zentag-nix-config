@@ -32,6 +32,7 @@
     cmatrix
     drumgizmo
     fragments
+    freecad
     gnomeExtensions.blur-my-shell
     gnomeExtensions.burn-my-windows
     gnomeExtensions.caffeine
