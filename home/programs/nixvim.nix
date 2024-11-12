@@ -56,9 +56,7 @@
           cssls.enable = true; # CSS
           tailwindcss.enable = true; # TailwindCSS
           html.enable = true; # HTML
-          phpactor.enable = true; # PHP
-          svelte.enable = false; # Svelte
-          vuels.enable = false; # Vue
+          svelte.enable = true; # Svelte
           pyright.enable = true; # Python
           marksman.enable = true; # Markdown
           nil_ls.enable = true; # Nix
