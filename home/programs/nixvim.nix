@@ -209,7 +209,12 @@
           ellipsis_char = "...";
         };
       };
-      treesitter.enable = true;
+      treesitter = {
+        enable = true;
+        settings = {
+          highlight.enable = true;
+        };
+      };
       markdown-preview = {
         enable = true;
         settings.auto_start = 1;
