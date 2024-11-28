@@ -51,6 +51,7 @@
     reaper
     sfizz
     stow
+    switcheroo
     synthv1
     textpieces
     toipe
