@@ -11,6 +11,24 @@
         action = "<cmd>Trouble<CR>";
         key = "<C-t>";
       }
+      {
+        mode = "n";
+        key = "<leader>db";
+        action = ":DapToggleBreakpoint<cr>";
+        options = {
+          silent = true;
+          desc = "Toggle Breakpoint";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dc";
+        action = ":DapContinue<cr>";
+        options = {
+          silent = true;
+          desc = "Continue";
+        };
+      }
     ];
     autoCmd = [
       {
@@ -34,6 +52,26 @@
       alpha = {
         enable = true;
         theme = "dashboard";
+      };
+      dap = {
+        enable = true;
+        adapters.servers.java = {
+          host = "127.0.0.1";
+          port = 5006;
+          id = "2";
+          executable = {
+            command = ''
+              config = function()
+                   require("java").setup {}
+                   require("lspconfig").jdtls.setup {
+                     on_attach = require("plugins.configs.lspconfig").on_attach,
+                     capabilities = require("plugins.configs.lspconfig").capabilities,
+                     filetypes = { "java" },
+                   }
+                 end,
+            '';
+          };
+        };
       };
       gitsigns = {
         enable = true;
@@ -65,6 +103,7 @@
           clangd.enable = true; # C/C++
           csharp_ls.enable = true; # C#
           yamlls.enable = true; # YAML
+          jdtls.enable = true; #Java
 
           lua_ls = {
             # Lua

@@ -42,6 +42,7 @@
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
     identity
+    jdk21
     kdenlive
     kicad
     mc
@@ -50,6 +51,7 @@
     qbittorrent
     reaper
     sfizz
+    slack
     stow
     switcheroo
     synthv1
