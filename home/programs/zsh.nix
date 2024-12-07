@@ -6,7 +6,6 @@
     zsh = {
       enable = true;
       shellAliases = {
-        n = "nvim";
         c = "~/.zentag-nix-config/helpers/config.sh";
         cd = "z";
         ff = "fastfetch";
@@ -19,14 +18,15 @@
         gd = "git diff";
         gf = "git pull";
         gp = "git push origin";
-        gs = "git status";
         gr = "git restore";
+        gs = "git status";
         kali = "quickemu --vm kali-kali-weekly.conf --display spice";
         ls = "eza --width=75 --hyperlink --color=always --git --icons=always";
+        n = "nvim";
+        update = "~/.zentag-nix-config/helpers/update.sh";
         update-lock = "cd ~/.zentag-nix-config/ && nix flake update";
         update-sys = "sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/";
         update-user = "home-manager switch --flake ~/.zentag-nix-config/";
-        update = "~/.zentag-nix-config/helpers/update.sh";
       };
       enableCompletion = true;
       syntaxHighlighting.enable = true;
