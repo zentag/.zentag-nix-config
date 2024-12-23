@@ -18,6 +18,7 @@
         gd = "git diff";
         gf = "git pull";
         gp = "git push origin";
+        gpb = "git push --set-upstream origin";
         gr = "git restore";
         gs = "git status";
         kali = "quickemu --vm kali-kali-weekly.conf --display spice";
