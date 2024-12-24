@@ -17,6 +17,7 @@
         gch = "git checkout";
         gd = "git diff";
         gf = "git pull";
+        gm = "git merge";
         gp = "git push origin";
         gpb = "git push --set-upstream origin";
         gr = "git restore";
