@@ -170,7 +170,7 @@
   users.users.zen = {
     isNormalUser = true;
     description = "Zen Gunawardhana";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "dialout" ];
     packages = with pkgs; [
       firefox
       #  thunderbird

@@ -22,6 +22,7 @@
         gpb = "git push --set-upstream origin";
         gr = "git restore";
         gs = "git status";
+        idf = "~/.zentag-nix-config/helpers/idf.sh";
         kali = "quickemu --vm kali-kali-weekly.conf --display spice";
         ls = "eza --width=75 --hyperlink --color=always --git --icons=always";
         n = "nvim";
