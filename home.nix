@@ -25,6 +25,7 @@
     # # "Hello, world!" when run.
     # pkgs.hello
     # librewolf
+    arduino-ide
     asciiquarium
     blanket
     bottom
@@ -45,6 +46,7 @@
     jdk21
     kdenlive
     kicad
+    libreoffice
     mc
     musescore
     obs-studio
