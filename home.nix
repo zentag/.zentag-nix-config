@@ -43,13 +43,14 @@
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
     identity
-    jdk21
+    jdk8
     kdenlive
     kicad
     libreoffice
     mc
     musescore
     obs-studio
+    python314
     qbittorrent
     reaper
     sfizz
