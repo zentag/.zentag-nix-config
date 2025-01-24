@@ -50,6 +50,7 @@
     mc
     musescore
     obs-studio
+    orca-slicer
     python314
     qbittorrent
     reaper
