@@ -31,6 +31,7 @@
     bottom
     carla
     cmatrix
+    cura
     drumgizmo
     fragments
     freecad
