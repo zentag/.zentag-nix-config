@@ -31,7 +31,7 @@
     bottom
     carla
     cmatrix
-    cura
+    cura-appimage
     drumgizmo
     fragments
     freecad
