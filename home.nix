@@ -52,6 +52,7 @@
     musescore
     obs-studio
     orca-slicer
+    pnpm
     python314
     qbittorrent
     reaper
