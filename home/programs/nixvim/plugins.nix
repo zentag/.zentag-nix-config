@@ -71,6 +71,7 @@
         };
       };
       neo-tree.enable = true;
+      vim-be-good.enable = true;
       telescope = {
         enable = true;
         keymaps = {
