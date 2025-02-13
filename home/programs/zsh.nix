@@ -10,6 +10,7 @@
         cd = "z";
         ff = "fastfetch";
         fk = "fuck";
+        g = "ga . && gc -m ";
         ga = "git add";
         galias = "alias | grep -oE 'g[a-z][a-z]?=.?*'";
         gb = "git branch";
