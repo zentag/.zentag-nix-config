@@ -55,7 +55,7 @@
           clangd.enable = true; # C/C++
           yamlls.enable = true; # YAML
           jdtls.enable = true; # Java
-          somesass_ls = true; # SASS
+          
           lua_ls = {
             # Lua
             enable = true;
@@ -71,7 +71,6 @@
         };
       };
       neo-tree.enable = true;
-      vim-be-good.enable = true;
       telescope = {
         enable = true;
         keymaps = {
