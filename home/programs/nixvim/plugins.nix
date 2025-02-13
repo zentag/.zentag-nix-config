@@ -53,10 +53,9 @@
           dockerls.enable = true; # Docker
           bashls.enable = true; # Bash
           clangd.enable = true; # C/C++
-          csharp_ls.enable = true; # C#
           yamlls.enable = true; # YAML
-          jdtls.enable = true; #Java
-
+          jdtls.enable = true; # Java
+          somesass_ls = true; # SASS
           lua_ls = {
             # Lua
             enable = true;
