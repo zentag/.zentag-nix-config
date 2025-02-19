@@ -146,6 +146,7 @@
       PermitRootLogin = "prohibit-password";
     };
   };
+  virtualisation.docker.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
