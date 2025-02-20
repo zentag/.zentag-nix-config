@@ -29,10 +29,9 @@
     asciiquarium
     blanket
     bottom
-    carla
     cmatrix
     cura-appimage
-    drumgizmo
+    firefox
     fragments
     freecad
     gnomeExtensions.blur-my-shell
@@ -43,12 +42,8 @@
     gnomeExtensions.noannoyance-fork
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
-    identity
-    jdk8
-    kdenlive
     kicad
     libreoffice
-    mc
     musescore
     obs-studio
     orca-slicer
@@ -56,17 +51,13 @@
     python314
     qbittorrent
     reaper
-    sfizz
     slack
     stow
     supabase-cli
     switcheroo
-    synthv1
     textpieces
     toipe
     ungoogled-chromium
-    vital
-    vscode
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
