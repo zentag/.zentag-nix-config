@@ -59,6 +59,7 @@
     sfizz
     slack
     stow
+    supabase-cli
     switcheroo
     synthv1
     textpieces
