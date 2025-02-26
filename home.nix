@@ -42,6 +42,7 @@
     gnomeExtensions.noannoyance-fork
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
+    jdk21
     kicad
     libreoffice
     musescore
