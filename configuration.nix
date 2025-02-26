@@ -168,21 +168,26 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.zen = {
-    isNormalUser = true;
-    description = "Zen Gunawardhana";
-    extraGroups = [ "networkmanager" "wheel" "audio" "dialout" ];
-    packages = with pkgs; [
-      firefox
-      #  thunderbird
-    ];
-  };
+  users.users = {
+    zen = {
+      isNormalUser = true;
+      description = "Zen Gunawardhana";
+      extraGroups = [ "networkmanager" "wheel" "audio" "dialout" ];
+      packages = with pkgs; [
+        firefox
+        #  thunderbird
+      ];
+    };
 
-  users.users.noah = {
-    isNormalUser = true;
-    home = "/home/noah";
+    noah = {
+      isNormalUser = true;
+      home = "/home/noah";
+    };
+    embae = {
+      isNormalUser = true;
+      home = "/home/embae";
+    };
   };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   programs.zsh.enable = true;
