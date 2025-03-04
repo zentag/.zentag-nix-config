@@ -35,6 +35,7 @@
     fragments
     freecad
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.browser-search-provider
     gnomeExtensions.burn-my-windows
     gnomeExtensions.caffeine
     gnomeExtensions.clipboard-history
