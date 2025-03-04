@@ -42,6 +42,7 @@
     gnomeExtensions.noannoyance-fork
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
+    gnomeExtensions.wireless-hid
     jdk21
     kicad
     libreoffice
