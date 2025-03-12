@@ -35,7 +35,6 @@
     fragments
     freecad
     gnomeExtensions.blur-my-shell
-    gnomeExtensions.browser-search-provider
     gnomeExtensions.burn-my-windows
     gnomeExtensions.caffeine
     gnomeExtensions.clipboard-history
@@ -61,6 +60,7 @@
     textpieces
     toipe
     ungoogled-chromium
+    valuta
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
