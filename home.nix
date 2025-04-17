@@ -34,6 +34,7 @@
     firefox
     fragments
     freecad
+    gimp
     gnomeExtensions.blur-my-shell
     gnomeExtensions.burn-my-windows
     gnomeExtensions.caffeine
