@@ -12,7 +12,10 @@ select mode in $(echo "ConfigureHM ConfigureNixos Both"); do
 		home-manager switch --flake ~/.zentag-nix-config/
 	fi
 	read -rp "Name of git commit (or enter for no commit): " name
-	git -C ~/.zentag-nix-config/ add .
-	git -C ~/.zentag-nix-config/ commit -m "$name"
-	git -C ~/.zentag-nix-config/ push origin
+	if [ "$name" != "" ]; then
+		git -C ~/.zentag-nix-config/ add .
+		git -C ~/.zentag-nix-config/ commit -m "$name"
+		git -C ~/.zentag-nix-config/ push origin
+	fi
+	source ~/.zshrc
 done
