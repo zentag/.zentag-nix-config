@@ -17,5 +17,5 @@ select mode in $(echo "ConfigureHM ConfigureNixos Both"); do
 		git -C ~/.zentag-nix-config/ commit -m "$name"
 		git -C ~/.zentag-nix-config/ push origin
 	fi
-	source ~/.zshrc
+	source ~/.zshrc >/dev/null
 done
