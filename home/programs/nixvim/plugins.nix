@@ -42,6 +42,7 @@
         enable = true;
         servers = {
           # Average webdev LSPs
+          astro.enable = true;
           ts_ls.enable = true; # TS/JS
           cssls.enable = true; # CSS
           tailwindcss.enable = true; # TailwindCSS
@@ -55,7 +56,7 @@
           clangd.enable = true; # C/C++
           yamlls.enable = true; # YAML
           jdtls.enable = true; # Java
-          
+
           lua_ls = {
             # Lua
             enable = true;
