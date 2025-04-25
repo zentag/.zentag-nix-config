@@ -5,26 +5,6 @@
         enable = true;
         theme = "dashboard";
       };
-      dap = {
-        enable = true;
-        adapters.servers.java = {
-          host = "127.0.0.1";
-          port = 5006;
-          id = "2";
-          executable = {
-            command = ''
-              config = function()
-                   require("java").setup {}
-                   require("lspconfig").jdtls.setup {
-                     on_attach = require("plugins.configs.lspconfig").on_attach,
-                     capabilities = require("plugins.configs.lspconfig").capabilities,
-                     filetypes = { "java" },
-                   }
-                 end,
-            '';
-          };
-        };
-      };
       gitsigns = {
         enable = true;
         settings.current_line_blame = true;
@@ -104,7 +84,6 @@
             stylua.enable = true;
             shfmt.enable = true;
             nixpkgs_fmt.enable = true;
-            google_java_format.enable = false;
             prettier = {
               enable = true;
               disableTsServerFormatter = true;
