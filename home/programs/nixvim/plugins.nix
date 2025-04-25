@@ -187,7 +187,6 @@
       };
       markdown-preview = {
         enable = true;
-        settings.auto_start = 1;
       };
       lualine.enable = true;
       luasnip.enable = true;
