@@ -66,7 +66,7 @@
           };
         }
       ];
-      initExtra = "export EDITOR='nvim' && ~/.zentag-nix-config/helpers/starttmux.sh";
+      initContent = "export EDITOR='nvim' && ~/.zentag-nix-config/helpers/starttmux.sh";
     };
     fzf = {
       enable = true;
