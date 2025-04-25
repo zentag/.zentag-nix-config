@@ -61,6 +61,7 @@
     switcheroo
     textpieces
     toipe
+    turso-cli
     ungoogled-chromium
     valuta
     # # It is sometimes useful to fine-tune packages, for example, by applying
