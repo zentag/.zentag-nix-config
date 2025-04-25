@@ -44,6 +44,7 @@
     gnomeExtensions.tiling-assistant
     gnomeExtensions.vitals
     gnomeExtensions.wireless-hid
+    google-chrome
     hyperfine
     jdk21
     kicad
