@@ -31,7 +31,6 @@
     bottom
     cmatrix
     cura-appimage
-    firefox
     fragments
     freecad
     gimp
