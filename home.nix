@@ -32,6 +32,7 @@
     cmatrix
     cura-appimage
     fragments
+    google-chrome
     kicad
     libgcc
     libreoffice
