@@ -32,21 +32,8 @@
     cmatrix
     cura-appimage
     fragments
-    freecad
-    gimp
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.burn-my-windows
-    gnomeExtensions.caffeine
-    gnomeExtensions.clipboard-history
-    gnomeExtensions.gsconnect
-    gnomeExtensions.noannoyance-fork
-    gnomeExtensions.tiling-assistant
-    gnomeExtensions.vitals
-    gnomeExtensions.wireless-hid
-    google-chrome
-    hyperfine
-    jdk21
     kicad
+    libgcc
     libreoffice
     musescore
     obs-studio
