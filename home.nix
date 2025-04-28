@@ -52,6 +52,7 @@
     obs-studio
     orca-slicer
     pnpm
+    prismlauncher
     python314
     qbittorrent
     reaper
