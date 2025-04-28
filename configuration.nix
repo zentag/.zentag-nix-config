@@ -147,6 +147,7 @@
     };
   };
   virtualisation.docker.enable = true;
+  services.upower.ignoreLid = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
