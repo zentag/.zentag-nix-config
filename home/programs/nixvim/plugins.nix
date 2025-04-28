@@ -5,6 +5,9 @@
         enable = true;
         theme = "dashboard";
       };
+      vim-be-good = {
+        enable = true;
+      };
       gitsigns = {
         enable = true;
         settings.current_line_blame = true;
