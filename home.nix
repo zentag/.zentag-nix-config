@@ -36,6 +36,7 @@
     libgcc
     libreoffice
     musescore
+    nodePackages.neovim
     obs-studio
     orca-slicer
     pnpm
