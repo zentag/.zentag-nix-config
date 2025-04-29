@@ -31,6 +31,7 @@
         update-lock = "cd ~/.zentag-nix-config/ && nix flake update";
         update-sys = "sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/";
         update-user = "home-manager switch --flake ~/.zentag-nix-config/";
+        v = "nvim ~/vimbegood";
       };
       enableCompletion = true;
       syntaxHighlighting.enable = true;
