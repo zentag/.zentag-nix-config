@@ -32,6 +32,7 @@
     cmatrix
     cura-appimage
     fragments
+    gnome-network-displays
     google-chrome
     kicad
     libgcc
