@@ -1,9 +1,4 @@
 { pkgs, ... }: {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-  ];
-
   # nix search wget
   environment.systemPackages = with pkgs; [
     bat
