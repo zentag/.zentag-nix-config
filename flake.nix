@@ -32,7 +32,7 @@
           inherit system;
           modules = [
             ./configuration.nix
-            ./hosts/hp/hardware-configuration.nix
+            ./hosts/hp
             musnix.nixosModules.musnix
           ];
         };
