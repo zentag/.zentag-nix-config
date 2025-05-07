@@ -32,6 +32,7 @@
     cmatrix
     cura-appimage
     fragments
+    freecad
     gnome-network-displays
     google-chrome
     kicad
