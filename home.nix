@@ -40,6 +40,7 @@
     libreoffice
     musescore
     nodePackages.neovim
+    obsidian
     obs-studio
     orca-slicer
     pnpm
