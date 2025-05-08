@@ -44,6 +44,7 @@
     obs-studio
     orca-slicer
     pnpm
+    prettierd
     prismlauncher
     python314
     qbittorrent
