@@ -13,7 +13,7 @@
     gh
     git
     gnome-remote-desktop
-    ventoy
+    libgcc
     nodejs
     pciutils
     python312Packages.pynvim
@@ -24,6 +24,7 @@
     thefuck
     tlrc
     usbutils
+    ventoy
     vim-language-server
     vimPlugins.coq_nvim
     w3m
