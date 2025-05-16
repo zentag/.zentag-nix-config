@@ -13,7 +13,6 @@
     gh
     git
     gnome-remote-desktop
-    libgcc
     nodejs
     pciutils
     python312Packages.pynvim

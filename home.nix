@@ -34,10 +34,10 @@
     cura-appimage
     fragments
     freecad
+    gcc_multi
     gnome-network-displays
     google-chrome
     kicad
-    libgcc
     libreoffice
     musescore
     nodePackages.neovim
