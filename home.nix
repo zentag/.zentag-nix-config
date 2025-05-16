@@ -52,7 +52,7 @@
     reaper
     rustc
     slack
-    sqlite
+    sqlite.dev
     stow
     supabase-cli
     switcheroo
