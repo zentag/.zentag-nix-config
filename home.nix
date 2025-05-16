@@ -29,6 +29,7 @@
     asciiquarium
     blanket
     bottom
+    cargo
     cmatrix
     cura-appimage
     fragments
@@ -49,6 +50,7 @@
     python314
     qbittorrent
     reaper
+    rustc
     slack
     stow
     supabase-cli
