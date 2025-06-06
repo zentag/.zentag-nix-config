@@ -36,6 +36,7 @@
     freecad
     gcc_multi
     gnome-network-displays
+    go
     google-chrome
     kicad
     libreoffice
