@@ -20,7 +20,6 @@
     python312Packages.python-lsp-server
     ripgrep
     silver-searcher
-    thefuck
     tlrc
     usbutils
     ventoy
