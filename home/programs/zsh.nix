@@ -77,9 +77,5 @@
       enable = true;
       enableZshIntegration = true;
     };
-    thefuck = {
-      enable = true;
-      enableZshIntegration = true;
-    };
   };
 }

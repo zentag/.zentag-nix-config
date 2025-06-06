@@ -22,7 +22,6 @@
     silver-searcher
     tlrc
     usbutils
-    ventoy
     vim-language-server
     vimPlugins.coq_nvim
     w3m
@@ -90,13 +89,13 @@
   };
   services = {
     flatpak.enable = true;
+
+    # Enable the GNOME Desktop Environment.
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
     xserver = {
       # Enable the X11 windowing system.
       enable = true;
-
-      # Enable the GNOME Desktop Environment.
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
 
       # Configure keymap in X11
 
