@@ -39,7 +39,7 @@
           clangd.enable = true; # C/C++
           yamlls.enable = true; # YAML
           jdtls.enable = true; # Java
-
+          gopls.enable = true;
           lua_ls = {
             # Lua
             enable = true;
