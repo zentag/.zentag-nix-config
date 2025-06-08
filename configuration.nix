@@ -89,12 +89,6 @@
   };
   services = {
     flatpak.enable = true;
-    cron = {
-      enable = true;
-      systemCronJobs = [
-        "*/5 * * * * ~/Documents/GitHub/uuZoomWebserver/cron.sh >/dev/null 2>&1"
-      ];
-    };
     # Enable the GNOME Desktop Environment.
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
