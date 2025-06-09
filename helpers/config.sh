@@ -1,5 +1,6 @@
 select mode in $(echo "ConfigureHM ConfigureNixos Both"); do
 	nvim ~/.zentag-nix-config/
+	ga . -C ~/.zentag-nix-config/
 	if [ "$REPLY" = 1 ]; then
 		home-manager switch --flake ~/.zentag-nix-config/
 	fi
@@ -13,7 +14,6 @@ select mode in $(echo "ConfigureHM ConfigureNixos Both"); do
 	fi
 	read -rp "Name of git commit (or enter for no commit): " name
 	if [ "$name" != "" ]; then
-		git -C ~/.zentag-nix-config/ add .
 		git -C ~/.zentag-nix-config/ commit -m "$name"
 		git -C ~/.zentag-nix-config/ push origin
 	fi
