@@ -11,7 +11,7 @@
     escapeTime = 0;
     # Force tmux to use /tmp for sockets (WSL2 compat)
     secureSocket = false;
-
+    keyMode = "vi";
     plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
       tmuxPlugins.catppuccin
