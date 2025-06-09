@@ -54,7 +54,10 @@
           };
         };
       };
-      neo-tree.enable = true;
+      neo-tree = {
+        enable = true;
+        filesystem.useLibuvFileWatcher = true;
+      };
       telescope = {
         enable = true;
         keymaps = {
