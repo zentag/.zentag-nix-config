@@ -48,6 +48,7 @@
     pnpm
     prettierd
     prismlauncher
+    prusa-slicer
     python314
     qbittorrent
     reaper
