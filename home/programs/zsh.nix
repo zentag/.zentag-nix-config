@@ -13,7 +13,7 @@
         g = "ga . && gc -m ";
         ga = "git add";
         galias = "alias | grep -oE 'g[a-z][a-z]?=.?*'";
-        gb = "git branch";
+        gb = "git checkout -b";
         gc = "git commit";
         gch = "git checkout";
         gd = "git diff";
