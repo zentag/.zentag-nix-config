@@ -1,8 +1,8 @@
 {
   imports = [
-    ./nixvim/keymap.nix
-    ./nixvim/plugins.nix
-    ./nixvim/lsp.nix
+    ./keymap.nix
+    ./plugins.nix
+    ./lsp.nix
   ];
   programs.nixvim = {
     enable = true;

@@ -1,6 +1,6 @@
 select mode in $(echo "ConfigureHM ConfigureNixos Both"); do
 	nvim ~/.zentag-nix-config/
-	ga . -C ~/.zentag-nix-config/
+	git -C ~/.zentag-nix-config/ add .
 	if [ "$REPLY" = 1 ]; then
 		home-manager switch --flake ~/.zentag-nix-config/
 	fi
