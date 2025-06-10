@@ -7,6 +7,10 @@
           files = {
             enable = true;
           };
+          ai = {
+            enable = true;
+          };
+          comment.enable = true;
         };
       };
       alpha = {
@@ -79,7 +83,6 @@
           };
         };
       };
-      commentary.enable = true;
       todo-comments.enable = true;
       cmp = {
         enable = true;
