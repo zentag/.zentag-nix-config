@@ -23,11 +23,11 @@
       }
       {
       key = "<leader>g";
-      action = "<cmd>Pick live_grep<CR>";
+      action = "<cmd>Pick live-grep<CR>";
       }
       {
       key = "<leader>e";
-      action = "MiniFiles.open()";
+      action = "<cmd>lua MiniFiles.open()<CR>";
       }
     ];
   };
