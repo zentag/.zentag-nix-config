@@ -11,30 +11,6 @@
       relativenumber = true; # Show relative line numbers
       shiftwidth = 2; # Tab width should be 2
     };
-    keymaps = [
-      {
-        action = "<cmd>Trouble<CR>";
-        key = "<C-t>";
-      }
-      {
-        mode = "n";
-        key = "<leader>db";
-        action = ":DapToggleBreakpoint<cr>";
-        options = {
-          silent = true;
-          desc = "Toggle Breakpoint";
-        };
-      }
-      {
-        mode = "n";
-        key = "<leader>dc";
-        action = ":DapContinue<cr>";
-        options = {
-          silent = true;
-          desc = "Continue";
-        };
-      }
-    ];
     autoCmd = [
       {
         command = "lua vim.lsp.buf.format({ async = false })";
