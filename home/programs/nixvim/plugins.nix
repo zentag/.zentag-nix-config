@@ -3,6 +3,11 @@
     plugins = {
       mini = {
         enable = true;
+        modules = {
+          files = {
+            enable = true;
+          };
+        };
       };
       alpha = {
         enable = true;
