@@ -27,7 +27,7 @@
         pattern = [ "*" ];
       }
     ];
-    globals.mapleader = ",";
+    globals.mapleader = " ";
     colorschemes.catppuccin.enable = true;
     extraConfigLua = ''
         luasnip = require("luasnip")
