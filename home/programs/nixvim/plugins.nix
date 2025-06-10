@@ -67,6 +67,8 @@
       markdown-preview = {
         enable = true;
       };
+      # Status line
+      lualine.enable = true;
       trouble = {
         enable = true;
       };
