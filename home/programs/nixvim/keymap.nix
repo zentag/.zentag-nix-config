@@ -17,6 +17,18 @@
         key = "<C-e>";
         action = "cmp.mapping.abort()";
       }
+      {
+      key = "<leader>f";
+      action = "<cmd>Pick files<CR>";
+      }
+      {
+      key = "<leader>g";
+      action = "<cmd>Pick live_grep<CR>";
+      }
+      {
+      key = "<leader>e";
+      action = "MiniFiles.open()";
+      }
     ];
   };
 }

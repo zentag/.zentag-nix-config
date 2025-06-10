@@ -43,15 +43,6 @@
           formatOnMove = true;
         };
       };
-      telescope = {
-        enable = true;
-        keymaps = {
-          "<leader>g" = "live_grep";
-          "<leader>f" = "find_files";
-          "<leader>m" = "media_files";
-        };
-        extensions.media-files.enable = true;
-      };
       web-devicons.enable = true;
       todo-comments.enable = true;
       treesitter = {
