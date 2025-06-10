@@ -16,6 +16,9 @@
           completion = {
             enable = true;
           };
+	  operators.enable = true;
+	  pairs.enable = true;
+	  surround.enable = true;
         };
       };
       alpha = {
@@ -57,13 +60,9 @@
       markdown-preview = {
         enable = true;
       };
-      lualine.enable = true;
-      luasnip.enable = true;
       trouble = {
         enable = true;
       };
-      nvim-autopairs.enable = true;
-      vim-surround.enable = true;
     };
   };
 }
