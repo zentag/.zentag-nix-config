@@ -1,6 +1,9 @@
 {
   programs.nixvim = {
     plugins = {
+      mini = {
+        enable = true;
+      };
       alpha = {
         enable = true;
         theme = "dashboard";
@@ -20,14 +23,10 @@
           formatOnMove = true;
         };
       };
-      neo-tree = {
-        enable = true;
-        filesystem.useLibuvFileWatcher = true;
-      };
       telescope = {
         enable = true;
         keymaps = {
-          "<leader>fg" = "live_grep";
+          "<leader>g" = "live_grep";
           "<leader>f" = "find_files";
           "<leader>m" = "media_files";
         };
