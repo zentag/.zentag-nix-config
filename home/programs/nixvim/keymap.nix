@@ -3,7 +3,11 @@
     keymaps = [
       {
         action = "<cmd>Trouble diagnostics<CR>";
-        key = "<C-t>";
+        key = "<leader>t";
+      }
+      {
+        action = "<cmd>TodoQuickFix<CR>";
+        key = "<leader>td";
       }
     ];
   };
