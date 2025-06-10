@@ -8,6 +8,7 @@
       shellAliases = {
         c = "~/.zentag-nix-config/helpers/config.sh";
         cd = "z";
+        d = "nix develop -c $SHELL";
         ff = "fastfetch";
         fk = "fuck";
         g = "ga . && gc -m ";
