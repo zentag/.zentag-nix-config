@@ -2,7 +2,7 @@
   programs.nixvim = {
     keymaps = [
       {
-        action = "<cmd>Trouble<CR>";
+        action = "<cmd>Trouble diagnostics<CR>";
         key = "<C-t>";
       }
       {
