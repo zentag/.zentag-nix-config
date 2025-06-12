@@ -14,7 +14,7 @@
         g = "ga . && gc -m ";
         ga = "git add";
         galias = "alias | grep -oE 'g[a-z][a-z]?=.?*'";
-        gb = ''func(){git checkout -b "@$" && git push -u origin "@$"} func'';
+        gb = ''func(){git checkout -b "@$" && git push -u origin "@$" && echo "@$"} func'';
         gc = "git commit";
         gch = "git checkout";
         gd = "git diff";
