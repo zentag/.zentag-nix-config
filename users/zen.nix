@@ -9,5 +9,13 @@
     neovim.enable = true;
     zsh.enable = true;
     tmux.enable = true;
+    pkgGroups = {
+      music = true;
+      office = true;
+      video = true;
+      programming = true;
+      fun = true;
+      design = true;
+    };
   };
 }
