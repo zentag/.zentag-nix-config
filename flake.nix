@@ -41,7 +41,7 @@
         zen = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./users/zen
+            ./users/zen.nix
             inputs.nixvim.homeManagerModules.nixvim
           ];
         };
