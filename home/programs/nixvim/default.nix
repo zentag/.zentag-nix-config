@@ -1,5 +1,10 @@
 { config, lib, ... }:
 {
+  imports = [
+    ./keymap.nix
+    ./plugins.nix
+    ./lsp.nix
+  ];
   options.customOpts = {
     neovim.enable = lib.mkEnableOption {
       default = true;
@@ -7,11 +12,6 @@
     };
   };
   config = lib.mkIf config.customOpts.neovim.enable {
-    imports = [
-      ./keymap.nix
-      ./plugins.nix
-      ./lsp.nix
-    ];
     programs.nixvim = {
       enable = true;
       opts = {
