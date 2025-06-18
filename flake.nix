@@ -31,7 +31,6 @@
         zens-good-laptop = lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
             ./hosts/hp
             musnix.nixosModules.musnix
           ];
