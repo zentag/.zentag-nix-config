@@ -78,9 +78,7 @@
             };
           }
         ];
-        initContent =
-          "export EDITOR='nvim'"
-          + (if config.customOpts.tmux.enable then " && ~/.zentag-nix-config/helpers/starttmux.sh" else "");
+        initContent = lib.mkIf config.customOpts.tmux.enable "~/.zentag-nix-config/helpers/starttmux.sh";
       };
       fzf = {
         enable = true;

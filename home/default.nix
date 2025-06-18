@@ -111,7 +111,7 @@
   #  /etc/profiles/per-user/zen/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   nixpkgs.config.allowUnfree = true;
