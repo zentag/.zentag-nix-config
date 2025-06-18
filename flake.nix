@@ -15,12 +15,13 @@
     };
   };
   outputs =
-    { self
-    , nixpkgs
-    , musnix
-    , home-manager
-    , ...
-    } @ inputs:
+    {
+      self,
+      nixpkgs,
+      musnix,
+      home-manager,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -40,7 +41,7 @@
         zen = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./home.nix
+            ./users/zen
             inputs.nixvim.homeManagerModules.nixvim
           ];
         };

@@ -5,7 +5,7 @@
   ...
 }:
 {
-  options = {
+  options.customOpts = {
     gnome.enable = lib.mkEnableOption {
       default = false;
       description = "Enables gnome desktop environment";
