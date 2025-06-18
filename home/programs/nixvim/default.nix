@@ -6,7 +6,7 @@
       description = "Use neovim";
     };
   };
-  config = {
+  config = lib.mkIf config.customOpts.neovim.enable {
     imports = [
       ./keymap.nix
       ./plugins.nix
