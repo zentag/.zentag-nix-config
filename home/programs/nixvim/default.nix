@@ -1,4 +1,8 @@
-{
+{config, lib}:{
+options.customOpts = {
+neovim.enable = lib.mkEnableOption {default=true;description="Use neovim";};
+}
+config = {
   imports = [
     ./keymap.nix
     ./plugins.nix
@@ -30,4 +34,4 @@
     globals.mapleader = " ";
     colorschemes.catppuccin.enable = true;
   };
-}
+};}
