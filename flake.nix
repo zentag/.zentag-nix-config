@@ -45,6 +45,14 @@
             inputs.nixvim.homeManagerModules.nixvim
           ];
         };
+        shell = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./users/shell.nix
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
+        };
+
       };
     };
 }
