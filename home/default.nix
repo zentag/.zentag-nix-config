@@ -4,6 +4,9 @@
   lib,
   ...
 }:
+let
+  pkgGrps = config.customOpts.pkgGroups;
+in
 {
   imports = [
     ./programs
@@ -15,6 +18,8 @@
       design = lib.mkEnableOption "Add tools for 3d and PCD design";
       office = lib.mkEnableOption "Add office software: writing, text processing, etc.";
       fun = lib.mkEnableOption "Fun stuff";
+      music = lib.mkEnableOption "Music programs";
+      video = lib.mkEnableOption "Video programs";
     };
   };
   config = {
@@ -29,63 +34,91 @@
 
     # The home.packages option allows you to install Nix packages into your
     # environment.
-    home.packages = with pkgs; [
-      # # Adds the 'hello' command to your environment. It prints a friendly
-      # # "Hello, world!" when run.
-      # pkgs.hello
-      # librewolf
-      arduino-ide
-      asciiquarium
-      blanket
-      bottom
-      cargo
-      cmatrix
-      cura-appimage
-      fragments
-      freecad
-      gcc_multi
-      gnome-network-displays
-      go
-      google-chrome
-      kicad
-      libreoffice
-      musescore
-      nodePackages.neovim
-      obsidian
-      obs-studio
-      orca-slicer
-      pnpm
-      prettierd
-      prismlauncher
-      prusa-slicer
-      python314
-      qbittorrent
-      reaper
-      rustc
-      slack
-      sqlite
-      stow
-      supabase-cli
-      switcheroo
-      textpieces
-      toipe
-      turso-cli
-      ungoogled-chromium
-      valuta
-      zoom-us
-      # # It is sometimes useful to fine-tune packages, for example, by applying
-      # # overrides. You can do that directly here, just don't forget the
-      # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-      # # fonts?
-      # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    home.packages =
+      with pkgs;
+      if pkgGrps.fun then
+        [
+          cmatrix
+          toipe
+          prismlauncher
+          asciiquarium
+        ]
+      else
+        [ ]
+        ++ (
+          if pkgGrps.programming then
+            [
+              cargo
+              nodePackages.neovim
+              arduino-ide
+              sqlite
+              go
+              supabase-cli
+              gcc_multi
+              pnpm
+              prettierd
+              rustc
+              python314
+              turso-cli
+            ]
+          else
+            [ ]
+        )
+        ++ (
+          if pkgGrps.design then
+            [
+              cura-appimage
+              freecad
+              kicad
+              prusa-slicer
+            ]
+          else
+            [ ]
+        )
+        ++ (
+          if pkgGrps.office then
+            [
+              zoom-us
+              libreoffice
+              ungoogled-chromium
+              slack
+            ]
+          else
+            [ ]
+        )
+        ++ (
+          if pkgGrps.video then
+            [
+              obs-studio
+            ]
+          else
+            [ ]
+        )
+        ++ (
+          if pkgGrps.music then
+            [
+              musescore
+              reaper
+            ]
+          else
+            [ ]
+        )
+        ++ [
+          bottom
+          obsidian
+          # # It is sometimes useful to fine-tune packages, for example, by applying
+          # # overrides. You can do that directly here, just don't forget the
+          # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
+          # # fonts?
+          # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
-      # # You can also create simple shell scripts directly inside your
-      # # configuration. For example, this adds a command 'my-hello' to your
-      # # environment:
-      # (pkgs.writeShellScriptBin "my-hello" ''
-      #   echo "Hello, ${config.home.username}!"
-      # '')
-    ];
+          # # You can also create simple shell scripts directly inside your
+          # # configuration. For example, this adds a command 'my-hello' to your
+          # # environment:
+          # (pkgs.writeShellScriptBin "my-hello" ''
+          #   echo "Hello, ${config.home.username}!"
+          # '')
+        ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
