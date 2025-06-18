@@ -4,6 +4,9 @@
   config,
   ...
 }:
+let
+  cfg = config.customOpts;
+in
 {
   options.customOpts = {
     gnome.enable = lib.mkEnableOption {
@@ -11,7 +14,7 @@
       description = "Enables gnome desktop environment";
     };
   };
-  config = lib.mkIf config.gnome.enable {
+  config = lib.mkIf cfg.gnome.enable {
     dconf = {
       enable = true;
       settings = {
