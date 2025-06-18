@@ -4,5 +4,6 @@
   ];
   customOpts = {
     gnome.enable = true;
+    neovim.enable = true;
   };
 }
