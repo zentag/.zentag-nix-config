@@ -6,7 +6,10 @@
 }:
 {
   options = {
-    gnome.enable = lib.mkEnableOption "Enables gnome desktop environment";
+    gnome.enable = lib.mkEnableOption {
+      default = false;
+      description = "Enables gnome desktop environment";
+    };
   };
   config = lib.mkIf config.gnome.enable {
     dconf = {
