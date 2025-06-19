@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # nix search wget
   environment.systemPackages = with pkgs; [
     bat
@@ -29,8 +30,10 @@
     yarn
     zoxide
   ];
-  virtualisation.waydroid.enable = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   musnix = {
     enable = true;
@@ -42,7 +45,7 @@
     optimise.automatic = true;
     gc = {
       automatic = true;
-      dates = "weekly";
+      dates = "daily";
       options = "--delete-older-than 30d";
     };
   };
@@ -98,7 +101,9 @@
 
       # Configure keymap in X11
 
-      xkb = { layout = "us"; };
+      xkb = {
+        layout = "us";
+      };
     };
 
     xrdp = {
@@ -157,7 +162,12 @@
     zen = {
       isNormalUser = true;
       description = "Zen Gunawardhana";
-      extraGroups = [ "networkmanager" "wheel" "audio" "dialout" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "audio"
+        "dialout"
+      ];
       packages = with pkgs; [
         firefox
         #  thunderbird
