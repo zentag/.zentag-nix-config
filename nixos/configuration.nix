@@ -65,8 +65,6 @@
   networking = {
     hostName = "zens-good-laptop"; # Define your hostname.
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    wireless.iwd.enable = true;
-
     # Enable networking
     networkmanager.enable = true;
     networkmanager.wifi.backend = "iwd";
