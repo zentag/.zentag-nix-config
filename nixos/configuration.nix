@@ -122,8 +122,6 @@
         PermitRootLogin = "prohibit-password";
       };
     };
-    upower.ignoreLid = true;
-
     # Enable sound with pipewire.
     pulseaudio.enable = false;
     pipewire = {
@@ -161,14 +159,6 @@
       ];
     };
 
-    noah = {
-      isNormalUser = true;
-      home = "/home/noah";
-    };
-    embae = {
-      isNormalUser = true;
-      home = "/home/embae";
-    };
   };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -176,26 +166,6 @@
   environment.pathsToLink = [ "/share/zsh" ];
 
   users.defaultUserShell = pkgs.zsh;
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # firewall.allowedTCPPorts = [ ... ];
-  # firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # firewall.enable = false;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
