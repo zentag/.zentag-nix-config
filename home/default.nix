@@ -36,89 +36,91 @@ in
     # environment.
     home.packages =
       with pkgs;
-      if pkgGrps.fun then
-        [
-          cmatrix
-          toipe
-          prismlauncher
-          asciiquarium
-        ]
-      else
-        [ ]
-        ++ (
-          if pkgGrps.programming then
-            [
-              cargo
-              nodePackages.neovim
-              arduino-ide
-              sqlite
-              go
-              supabase-cli
-              gcc_multi
-              pnpm
-              prettierd
-              rustc
-              python314
-              turso-cli
-            ]
-          else
-            [ ]
-        )
-        ++ (
-          if pkgGrps.design then
-            [
-              cura-appimage
-              freecad
-              kicad
-              prusa-slicer
-            ]
-          else
-            [ ]
-        )
-        ++ (
-          if true then
-            [
-              zoom-us
-              libreoffice
-              ungoogled-chromium
-              slack
-            ]
-          else
-            [ ]
-        )
-        ++ (
-          if pkgGrps.video then
-            [
-              obs-studio
-            ]
-          else
-            [ ]
-        )
-        ++ (
-          if pkgGrps.music then
-            [
-              musescore
-              reaper
-            ]
-          else
-            [ ]
-        )
-        ++ [
-          bottom
-          obsidian
-          # # It is sometimes useful to fine-tune packages, for example, by applying
-          # # overrides. You can do that directly here, just don't forget the
-          # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-          # # fonts?
-          # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+      (
+        if pkgGrps.fun then
+          [
+            cmatrix
+            toipe
+            prismlauncher
+            asciiquarium
+          ]
+        else
+          [ ]
+      )
+      ++ (
+        if pkgGrps.programming then
+          [
+            cargo
+            nodePackages.neovim
+            arduino-ide
+            sqlite
+            go
+            supabase-cli
+            gcc_multi
+            pnpm
+            prettierd
+            rustc
+            python314
+            turso-cli
+          ]
+        else
+          [ ]
+      )
+      ++ (
+        if pkgGrps.design then
+          [
+            cura-appimage
+            freecad
+            kicad
+            prusa-slicer
+          ]
+        else
+          [ ]
+      )
+      ++ (
+        if pkgGrps.office then
+          [
+            zoom-us
+            libreoffice
+            ungoogled-chromium
+            slack
+          ]
+        else
+          [ ]
+      )
+      ++ (
+        if pkgGrps.video then
+          [
+            obs-studio
+          ]
+        else
+          [ ]
+      )
+      ++ (
+        if pkgGrps.music then
+          [
+            musescore
+            reaper
+          ]
+        else
+          [ ]
+      )
+      ++ [
+        bottom
+        obsidian
+        # # It is sometimes useful to fine-tune packages, for example, by applying
+        # # overrides. You can do that directly here, just don't forget the
+        # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
+        # # fonts?
+        # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
-          # # You can also create simple shell scripts directly inside your
-          # # configuration. For example, this adds a command 'my-hello' to your
-          # # environment:
-          # (pkgs.writeShellScriptBin "my-hello" ''
-          #   echo "Hello, ${config.home.username}!"
-          # '')
-        ];
+        # # You can also create simple shell scripts directly inside your
+        # # configuration. For example, this adds a command 'my-hello' to your
+        # # environment:
+        # (pkgs.writeShellScriptBin "my-hello" ''
+        #   echo "Hello, ${config.home.username}!"
+        # '')
+      ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
