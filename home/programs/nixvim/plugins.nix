@@ -16,17 +16,20 @@
           completion = {
             enable = true;
           };
-	  operators.enable = true;
-	  pairs.enable = true;
-	  surround.enable = true;
-	  bracketed.enable = true;
-	  diff.enable = true;
-	  extra.enable = true;
-	  pick.enable = true;
-	  git.enable = true;
-	  jump.enable = true;
-	  notify.enable = true;
+          operators.enable = true;
+          pairs.enable = true;
+          surround.enable = true;
+          bracketed.enable = true;
+          diff.enable = true;
+          extra.enable = true;
+          pick.enable = true;
+          git.enable = true;
+          jump.enable = true;
+          notify.enable = true;
         };
+      };
+      remote-nvim = {
+        enable = true;
       };
       alpha = {
         enable = true;
