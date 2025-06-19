@@ -43,6 +43,9 @@ in
             toipe
             prismlauncher
             asciiquarium
+            cowsay
+            jp2a
+            cbonsai
           ]
         else
           [ ]
