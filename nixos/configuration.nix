@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 {
   # nix search wget
   environment.systemPackages = with pkgs; [
@@ -141,25 +146,6 @@
   virtualisation.docker.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   # xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users = {
-    zen = {
-      isNormalUser = true;
-      description = "Zen Gunawardhana";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-        "audio"
-        "dialout"
-      ];
-      packages = with pkgs; [
-        firefox
-        #  thunderbird
-      ];
-    };
-
-  };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   programs.zsh.enable = true;
