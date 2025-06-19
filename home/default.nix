@@ -39,14 +39,14 @@ in
       (
         if pkgGrps.fun then
           [
-            cmatrix
-            toipe
-            prismlauncher
             asciiquarium
+            cbonsai
+            cmatrix
             cowsay
             jp2a
             lolcat
-            cbonsai
+            prismlauncher
+            toipe
           ]
         else
           [ ]
@@ -54,17 +54,17 @@ in
       ++ (
         if pkgGrps.programming then
           [
-            cargo
-            nodePackages.neovim
             arduino-ide
-            sqlite
-            go
-            supabase-cli
+            cargo
             gcc_multi
+            go
+            nodePackages.neovim
             pnpm
             prettierd
-            rustc
             python314
+            rustc
+            sqlite
+            supabase-cli
             turso-cli
           ]
         else
@@ -84,10 +84,10 @@ in
       ++ (
         if pkgGrps.office then
           [
-            zoom-us
             libreoffice
-            ungoogled-chromium
             slack
+            ungoogled-chromium
+            zoom-us
           ]
         else
           [ ]
