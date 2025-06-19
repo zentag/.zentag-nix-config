@@ -76,7 +76,7 @@ in
             [ ]
         )
         ++ (
-          if pkgGrps.office then
+          if true then
             [
               zoom-us
               libreoffice
