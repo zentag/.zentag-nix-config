@@ -24,6 +24,7 @@
     python312Packages.pynvim
     python312Packages.pynvim-pp
     python312Packages.python-lsp-server
+    quickemu
     ripgrep
     silver-searcher
     tlrc
