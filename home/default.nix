@@ -45,6 +45,7 @@ in
             asciiquarium
             cowsay
             jp2a
+            lolcat
             cbonsai
           ]
         else
