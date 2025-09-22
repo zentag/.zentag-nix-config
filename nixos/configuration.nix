@@ -5,6 +5,8 @@
   ...
 }:
 {
+  # fix 90s hang on shutdown
+  virtualisation.docker.liveRestore = false;
   # nix search wget
   environment.systemPackages = with pkgs; [
     bat
