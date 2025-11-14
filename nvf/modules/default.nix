@@ -1,6 +1,6 @@
 {
   imports = [
     ./cosmetic.nix
-    ./cmp-fmt.nix
+    ./lsp.nix
   ];
 }
