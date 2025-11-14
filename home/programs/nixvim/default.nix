@@ -7,7 +7,7 @@
   ];
   options.customOpts = {
     neovim.enable = lib.mkEnableOption {
-      default = true;
+      default = false;
       description = "Use neovim";
     };
   };
