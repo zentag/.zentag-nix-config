@@ -8,53 +8,11 @@
         ]
       },
       "locked": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "lastModified": 1760948891,
-        "narHash": "sha256-TmWcdiUUaWk8J4lpjzu4gCGxWY6/Ok7mOK4fIFfBuU4=",
-||||||| Stash base
         "lastModified": 1756770412,
         "narHash": "sha256-+uWLQZccFHwqpGqr2Yt5VsW/PbeJVTn9Dk6SHWhNRPw=",
-=======
-        "lastModified": 1759362264,
-        "narHash": "sha256-wfG0S7pltlYyZTM+qqlhJ7GMw2fTF4mLKCIVhLii/4M=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1756770412,
-        "narHash": "sha256-+uWLQZccFHwqpGqr2Yt5VsW/PbeJVTn9Dk6SHWhNRPw=",
-=======
-        "lastModified": 1759362264,
-        "narHash": "sha256-wfG0S7pltlYyZTM+qqlhJ7GMw2fTF4mLKCIVhLii/4M=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1756770412,
-        "narHash": "sha256-+uWLQZccFHwqpGqr2Yt5VsW/PbeJVTn9Dk6SHWhNRPw=",
-=======
-        "lastModified": 1759362264,
-        "narHash": "sha256-wfG0S7pltlYyZTM+qqlhJ7GMw2fTF4mLKCIVhLii/4M=",
->>>>>>> Stashed changes
         "owner": "hercules-ci",
         "repo": "flake-parts",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "rev": "864599284fc7c0ba6357ed89ed5e2cd5040f0c04",
-||||||| Stash base
         "rev": "4524271976b625a4a605beefd893f270620fd751",
-=======
-        "rev": "758cf7296bee11f1706a574c77d072b8a7baa881",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "4524271976b625a4a605beefd893f270620fd751",
-=======
-        "rev": "758cf7296bee11f1706a574c77d072b8a7baa881",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "4524271976b625a4a605beefd893f270620fd751",
-=======
-        "rev": "758cf7296bee11f1706a574c77d072b8a7baa881",
->>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
@@ -88,53 +46,11 @@
         ]
       },
       "locked": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "lastModified": 1762228452,
-        "narHash": "sha256-Y5950vzoyJ8+u4U6dlI/2VEbf3JQnIJsmRWWWcsgpRg=",
-||||||| Stash base
         "lastModified": 1758545873,
         "narHash": "sha256-0VP5cVd6DyibHNPC/IJ5Ut+KuNYUeKmr5ltzf+IcpjA=",
-=======
-        "lastModified": 1759853171,
-        "narHash": "sha256-uqbhyXtqMbYIiMqVqUhNdSuh9AEEkiasoK3mIPIVRhk=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1758545873,
-        "narHash": "sha256-0VP5cVd6DyibHNPC/IJ5Ut+KuNYUeKmr5ltzf+IcpjA=",
-=======
-        "lastModified": 1759853171,
-        "narHash": "sha256-uqbhyXtqMbYIiMqVqUhNdSuh9AEEkiasoK3mIPIVRhk=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1758545873,
-        "narHash": "sha256-0VP5cVd6DyibHNPC/IJ5Ut+KuNYUeKmr5ltzf+IcpjA=",
-=======
-        "lastModified": 1759853171,
-        "narHash": "sha256-uqbhyXtqMbYIiMqVqUhNdSuh9AEEkiasoK3mIPIVRhk=",
->>>>>>> Stashed changes
         "owner": "nix-community",
         "repo": "home-manager",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "rev": "aa6936bb637e46a49cf1292486200ba41dd4bcf7",
-||||||| Stash base
         "rev": "de5369834ff1f75246c46be89ef993392e961c26",
-=======
-        "rev": "1a09eb84fa9e33748432a5253102d01251f72d6d",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "de5369834ff1f75246c46be89ef993392e961c26",
-=======
-        "rev": "1a09eb84fa9e33748432a5253102d01251f72d6d",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "de5369834ff1f75246c46be89ef993392e961c26",
-=======
-        "rev": "1a09eb84fa9e33748432a5253102d01251f72d6d",
->>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
@@ -208,53 +124,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "lastModified": 1762111121,
-        "narHash": "sha256-4vhDuZ7OZaZmKKrnDpxLZZpGIJvAeMtK6FKLJYUtAdw=",
-||||||| Stash base
         "lastModified": 1758277210,
         "narHash": "sha256-iCGWf/LTy+aY0zFu8q12lK8KuZp7yvdhStehhyX1v8w=",
-=======
-        "lastModified": 1759831965,
-        "narHash": "sha256-vgPm2xjOmKdZ0xKA6yLXPJpjOtQPHfaZDRtH+47XEBo=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1758277210,
-        "narHash": "sha256-iCGWf/LTy+aY0zFu8q12lK8KuZp7yvdhStehhyX1v8w=",
-=======
-        "lastModified": 1759831965,
-        "narHash": "sha256-vgPm2xjOmKdZ0xKA6yLXPJpjOtQPHfaZDRtH+47XEBo=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1758277210,
-        "narHash": "sha256-iCGWf/LTy+aY0zFu8q12lK8KuZp7yvdhStehhyX1v8w=",
-=======
-        "lastModified": 1759831965,
-        "narHash": "sha256-vgPm2xjOmKdZ0xKA6yLXPJpjOtQPHfaZDRtH+47XEBo=",
->>>>>>> Stashed changes
         "owner": "NixOS",
         "repo": "nixpkgs",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "rev": "b3d51a0365f6695e7dd5cdf3e180604530ed33b4",
-||||||| Stash base
         "rev": "8eaee110344796db060382e15d3af0a9fc396e0e",
-=======
-        "rev": "c9b6fb798541223bbb396d287d16f43520250518",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "8eaee110344796db060382e15d3af0a9fc396e0e",
-=======
-        "rev": "c9b6fb798541223bbb396d287d16f43520250518",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "8eaee110344796db060382e15d3af0a9fc396e0e",
-=======
-        "rev": "c9b6fb798541223bbb396d287d16f43520250518",
->>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
@@ -273,53 +147,11 @@
         "systems": "systems_2"
       },
       "locked": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "lastModified": 1762207388,
-        "narHash": "sha256-+FvGHB57ZuJIYbI35qcyGsxhvKdeKlX7AomVD6M5sIg=",
-||||||| Stash base
         "lastModified": 1758551108,
         "narHash": "sha256-3KArqJcnrcEr1M3QsBG7NZRQSxVNFI3In+9MHdVmUKY=",
-=======
-        "lastModified": 1759878636,
-        "narHash": "sha256-yKMf+iG5KmQkMamtT8wWNFwyjSiluHyH683OcpJh/kQ=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1758551108,
-        "narHash": "sha256-3KArqJcnrcEr1M3QsBG7NZRQSxVNFI3In+9MHdVmUKY=",
-=======
-        "lastModified": 1759878636,
-        "narHash": "sha256-yKMf+iG5KmQkMamtT8wWNFwyjSiluHyH683OcpJh/kQ=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1758551108,
-        "narHash": "sha256-3KArqJcnrcEr1M3QsBG7NZRQSxVNFI3In+9MHdVmUKY=",
-=======
-        "lastModified": 1759878636,
-        "narHash": "sha256-yKMf+iG5KmQkMamtT8wWNFwyjSiluHyH683OcpJh/kQ=",
->>>>>>> Stashed changes
         "owner": "nix-community",
         "repo": "nixvim",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "rev": "de1760ddfd3e67aa5d2251d7df9e6bad30c36692",
-||||||| Stash base
         "rev": "f828dead7723e7680b09929b9886225389d0370b",
-=======
-        "rev": "c074710027ce3047382326d1fcc1a4e174cccfcc",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "f828dead7723e7680b09929b9886225389d0370b",
-=======
-        "rev": "c074710027ce3047382326d1fcc1a4e174cccfcc",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "f828dead7723e7680b09929b9886225389d0370b",
-=======
-        "rev": "c074710027ce3047382326d1fcc1a4e174cccfcc",
->>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
@@ -338,53 +170,11 @@
         ]
       },
       "locked": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "lastModified": 1761730856,
-        "narHash": "sha256-t1i5p/vSWwueZSC0Z2BImxx3BjoUDNKyC2mk24krcMY=",
-||||||| Stash base
         "lastModified": 1758272005,
         "narHash": "sha256-1u3xTH+3kaHhztPmWtLAD8LF5pTYLR2CpsPFWTFnVtQ=",
-=======
-        "lastModified": 1758662783,
-        "narHash": "sha256-igrxT+/MnmcftPOHEb+XDwAMq3Xg1Xy7kVYQaHhPlAg=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1758272005,
-        "narHash": "sha256-1u3xTH+3kaHhztPmWtLAD8LF5pTYLR2CpsPFWTFnVtQ=",
-=======
-        "lastModified": 1758662783,
-        "narHash": "sha256-igrxT+/MnmcftPOHEb+XDwAMq3Xg1Xy7kVYQaHhPlAg=",
->>>>>>> Stashed changes
-||||||| Stash base
-        "lastModified": 1758272005,
-        "narHash": "sha256-1u3xTH+3kaHhztPmWtLAD8LF5pTYLR2CpsPFWTFnVtQ=",
-=======
-        "lastModified": 1758662783,
-        "narHash": "sha256-igrxT+/MnmcftPOHEb+XDwAMq3Xg1Xy7kVYQaHhPlAg=",
->>>>>>> Stashed changes
         "owner": "NuschtOS",
         "repo": "search",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "rev": "e29de6db0cb3182e9aee75a3b1fd1919d995d85b",
-||||||| Stash base
         "rev": "aa975a3757f28ce862812466c5848787b868e116",
-=======
-        "rev": "7d4c0fc4ffe3bd64e5630417162e9e04e64b27a4",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "aa975a3757f28ce862812466c5848787b868e116",
-=======
-        "rev": "7d4c0fc4ffe3bd64e5630417162e9e04e64b27a4",
->>>>>>> Stashed changes
-||||||| Stash base
-        "rev": "aa975a3757f28ce862812466c5848787b868e116",
-=======
-        "rev": "7d4c0fc4ffe3bd64e5630417162e9e04e64b27a4",
->>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
