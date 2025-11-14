@@ -13,7 +13,7 @@
     btop
     deja-dup
     delta
-    du-dust
+    dust
     eza
     fastfetch
     fd
