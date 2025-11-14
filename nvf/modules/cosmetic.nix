@@ -1,0 +1,1 @@
+{ vim.theme.enable = true; }

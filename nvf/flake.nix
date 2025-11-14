@@ -1,8 +1,8 @@
 {
-  description = "Minimal NVF flake with one example plugin";
+  description = "Minimal NVF flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvf.url = "github:NotAShelf/nvf";
   };
 
@@ -21,13 +21,13 @@
       };
     in
     {
-      # This produces a runnable nvim
-      packages.${system}.default = nvf.lib.neovimConfiguration {
-        inherit pkgs;
+      packages.${system}.default =
+        (nvf.lib.neovimConfiguration {
+          inherit pkgs;
 
-        modules = [
-          ./modules
-        ];
-      };
+          modules = [
+            ./modules
+          ];
+        }).neovim;
     };
 }
