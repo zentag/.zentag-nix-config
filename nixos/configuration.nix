@@ -36,6 +36,7 @@
     w3m
     wl-clipboard
     yarn
+    ytdl-sub
     zoxide
   ];
   nix.settings.experimental-features = [
