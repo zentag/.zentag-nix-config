@@ -2,8 +2,7 @@
   pkgs,
   nvf,
   ...
-}:
-{
+}: {
   # fix 90s hang on shutdown
   virtualisation.docker.liveRestore = false;
   # nix search wget
@@ -20,7 +19,7 @@
     gh
     git
     gnome-remote-desktop
-    nvf.packages.${pkgs.system}.default
+    nvf.packages.${stdenv.hostPlatform.system}.default
     nodejs
     pciutils
     python312Packages.pynvim
@@ -121,7 +120,7 @@
 
     openssh = {
       enable = true;
-      ports = [ 22 ];
+      ports = [22];
       settings = {
         PasswordAuthentication = true;
         AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
@@ -152,7 +151,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   programs.zsh.enable = true;
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.pathsToLink = ["/share/zsh"];
 
   users.defaultUserShell = pkgs.zsh;
   # This value determines the NixOS release from which the default
