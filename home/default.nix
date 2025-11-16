@@ -58,7 +58,6 @@ in
             cargo
             gcc_multi
             go
-            nodePackages.neovim
             pnpm
             prettierd
             python314

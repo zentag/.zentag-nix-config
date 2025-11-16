@@ -1,7 +1,6 @@
 {
   pkgs,
-  config,
-  lib,
+  nvf,
   ...
 }:
 {
@@ -21,6 +20,7 @@
     gh
     git
     gnome-remote-desktop
+    nvf.packages.${pkgs.system}.default
     nodejs
     pciutils
     python312Packages.pynvim
