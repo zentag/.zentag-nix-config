@@ -4,6 +4,6 @@
     ./lsp.nix
     ./keymaps.nix
     ./highlighting.nix
-    ./util.nix
+    ./text-processing.nix
   ];
 }
