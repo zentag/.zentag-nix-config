@@ -17,7 +17,7 @@
     }
     {
       key = "<leader>g";
-      action = "<cmd>Pick live-grep<CR>";
+      action = "<cmd>Pick grep_live<CR>";
       mode = "n";
     }
     {
