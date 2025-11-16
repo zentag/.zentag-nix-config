@@ -9,5 +9,6 @@
     statusline.lualine = {
       enable = true;
     };
+    mini.icons.enable = true;
   };
 }
