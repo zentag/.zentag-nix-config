@@ -9,7 +9,6 @@
   environment.systemPackages = with pkgs; [
     bat
     btop
-    deja-dup
     delta
     dust
     eza
