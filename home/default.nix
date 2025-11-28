@@ -3,11 +3,9 @@
   pkgs,
   lib,
   ...
-}:
-let
+}: let
   pkgGrps = config.customOpts.pkgGroups;
-in
-{
+in {
   imports = [
     ./programs
     ./dconf.nix
@@ -34,79 +32,73 @@ in
 
     # The home.packages option allows you to install Nix packages into your
     # environment.
-    home.packages =
-      with pkgs;
+    home.packages = with pkgs;
       (
-        if pkgGrps.fun then
-          [
-            asciiquarium
-            cbonsai
-            cmatrix
-            cowsay
-            jp2a
-            lolcat
-            prismlauncher
-            toipe
-          ]
-        else
-          [ ]
+        if pkgGrps.fun
+        then [
+          asciiquarium
+          cbonsai
+          cmatrix
+          cowsay
+          discord
+          jp2a
+          lolcat
+          prismlauncher
+          toipe
+        ]
+        else []
       )
       ++ (
-        if pkgGrps.programming then
-          [
-            arduino-ide
-            cargo
-            gcc_multi
-            go
-            pnpm
-            prettierd
-            python314
-            rustc
-            sqlite
-            supabase-cli
-            turso-cli
-          ]
-        else
-          [ ]
+        if pkgGrps.programming
+        then [
+          arduino-ide
+          cargo
+          gcc_multi
+          go
+          pnpm
+          prettierd
+          python314
+          rustc
+          sqlite
+          supabase-cli
+          turso-cli
+        ]
+        else []
       )
       ++ (
-        if pkgGrps.design then
-          [
-            cura-appimage
-            freecad
-            kicad
-            prusa-slicer
-          ]
-        else
-          [ ]
+        if pkgGrps.design
+        then [
+          cura-appimage
+          freecad
+          kicad
+          prusa-slicer
+        ]
+        else []
       )
       ++ (
-        if pkgGrps.office then
-          [
-            libreoffice
-            slack
-            ungoogled-chromium
-            zoom-us
-          ]
-        else
-          [ ]
+        if pkgGrps.office
+        then [
+          libreoffice
+          slack
+          ungoogled-chromium
+          zoom-us
+        ]
+        else []
       )
       ++ (
-        if pkgGrps.video then
-          [
-            obs-studio
-          ]
-        else
-          [ ]
+        if pkgGrps.video
+        then [
+          obs-studio
+        ]
+        else []
       )
       ++ (
-        if pkgGrps.music then
-          [
-            musescore
-            reaper
-          ]
-        else
-          [ ]
+        if pkgGrps.music
+        then [
+          musescore
+          reaper
+        ]
+        else []
       )
       ++ [
         bottom
