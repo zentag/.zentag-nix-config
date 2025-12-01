@@ -3,8 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   options.customOpts = {
     zsh.enable = lib.mkEnableOption {
       description = "use zsh as default shell";
@@ -33,6 +32,7 @@
           gp = "git push";
           gpb = "git push --set-upstream origin";
           gr = "git restore";
+          grs = "git restore --staged";
           gs = "git status";
           idf = "~/.zentag-nix-config/helpers/idf.sh";
           kali = "quickemu --vm kali-kali-weekly.conf --display spice";
