@@ -68,6 +68,9 @@
       powerOnBoot = true;
     };
   };
+  powerManagement.resumeCommands = ''
+    nmcli r wifi on
+  '';
   networking = {
     hostName = "zens-good-laptop"; # Define your hostname.
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
