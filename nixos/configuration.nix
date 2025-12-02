@@ -17,6 +17,7 @@
     fzf
     gh
     git
+    gnome-network-displays
     gnome-remote-desktop
     nvf.packages.${stdenv.hostPlatform.system}.default
     nodejs
@@ -76,7 +77,7 @@
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     # Enable networking
     networkmanager.enable = true;
-    networkmanager.wifi.backend = "wpa_supplicant";
+    networkmanager.wifi.backend = "iwd";
 
     firewall.enable = false;
   };
