@@ -22,16 +22,11 @@
     nvf.packages.${stdenv.hostPlatform.system}.default
     nodejs
     pciutils
-    python312Packages.pynvim
-    python312Packages.pynvim-pp
-    python312Packages.python-lsp-server
     quickemu
     ripgrep
     silver-searcher
     tlrc
     usbutils
-    vim-language-server
-    vimPlugins.coq_nvim
     w3m
     wl-clipboard
     yarn
