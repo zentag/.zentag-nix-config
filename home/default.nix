@@ -52,14 +52,8 @@ in {
         if pkgGrps.programming
         then [
           arduino-ide
-          cargo
-          gcc_multi
-          go
-          pnpm
           prettierd
-          python314
-          rustc
-          sqlite
+          python3
           supabase-cli
           turso-cli
         ]
