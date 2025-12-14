@@ -7,6 +7,7 @@
   virtualisation.docker.liveRestore = false;
   # nix search wget
   environment.systemPackages = with pkgs; [
+    android-tools
     bat
     btop
     delta
