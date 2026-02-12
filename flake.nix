@@ -33,6 +33,7 @@
         ];
         specialArgs = {
           inherit nvf;
+          inherit frc;
         };
       };
     };

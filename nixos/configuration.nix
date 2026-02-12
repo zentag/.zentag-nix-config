@@ -1,8 +1,10 @@
 {
   pkgs,
   nvf,
+  frc,
   ...
 }: {
+  nixpkgs.overlays = [frc.overlays.default];
   # fix 90s hang on shutdown
   virtualisation.docker.liveRestore = false;
   # nix search wget
@@ -32,6 +34,7 @@
     wl-clipboard
     yarn
     zoxide
+    vscode-extensions.wpilibsuite.vscode-wpilib
   ];
   nix.settings.experimental-features = [
     "nix-command"
