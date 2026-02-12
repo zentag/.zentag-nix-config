@@ -35,6 +35,7 @@
     yarn
     zoxide
     vscode-extensions.wpilibsuite.vscode-wpilib
+    vscode
   ];
   nix.settings.experimental-features = [
     "nix-command"
