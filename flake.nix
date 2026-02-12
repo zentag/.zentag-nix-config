@@ -21,7 +21,7 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = nixpkgs.legacyPackages.${system}.extend frc.overlays.default;
     lib = nixpkgs.lib;
   in {
     nixosConfigurations = {
@@ -30,7 +30,6 @@
         modules = [
           ./hosts/hp
           musnix.nixosModules.musnix
-          frc
         ];
         specialArgs = {
           inherit nvf;
