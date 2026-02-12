@@ -34,9 +34,12 @@
     wl-clipboard
     yarn
     zoxide
-    vscode-extensions.wpilibsuite.vscode-wpilib
-    vscode
   ];
+  programs.vscode = {
+    enable = true;
+    extensions = [pkgs.
+    vscode-extensions.wpilibsuite.vscode-wpilib];
+  };
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
