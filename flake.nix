@@ -9,6 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf.url = "path:./nvf";
+    frc.url = "github:frc4451/frc-nix";
   };
   outputs = {
     self,
@@ -16,6 +17,7 @@
     musnix,
     home-manager,
     nvf,
+    frc,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -28,6 +30,7 @@
         modules = [
           ./hosts/hp
           musnix.nixosModules.musnix
+          frc
         ];
         specialArgs = {
           inherit nvf;
