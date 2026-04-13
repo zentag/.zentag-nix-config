@@ -45,12 +45,6 @@
     "flakes"
   ];
 
-  musnix = {
-    enable = true;
-    kernel.realtime = true;
-    kernel.packages = pkgs.linuxPackages-rt_latest;
-    rtirq.enable = true;
-  };
   nix = {
     optimise.automatic = true;
     gc = {

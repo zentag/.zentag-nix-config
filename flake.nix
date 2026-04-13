@@ -29,7 +29,6 @@
         inherit system;
         modules = [
           ./hosts/hp
-          musnix.nixosModules.musnix
         ];
         specialArgs = {
           inherit nvf;
