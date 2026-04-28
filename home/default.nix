@@ -57,6 +57,7 @@ in {
           supabase-cli
           turso-cli
           gradle
+          jdk17_headless
         ]
         else []
       )
