@@ -56,6 +56,7 @@ in {
           python3
           supabase-cli
           turso-cli
+          gradle
         ]
         else []
       )
