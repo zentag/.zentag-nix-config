@@ -20,7 +20,6 @@
       lua.enable = true;
       markdown = {
         enable = true;
-        extensions.markview-nvim.enable = true;
       };
       nix.enable = true;
       rust.enable = true;
