@@ -9,11 +9,11 @@ select mode in "Configure HM" "Configure Nixos" "Both"; do
                 home-manager switch --flake ~/.zentag-nix-config/
         fi
         if [ "$REPLY" = 2 ]; then
-                sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/
+                sudo nixos-rebuild switch --flake ~/.zentag-nix-config/
 
         fi
         if [ "$REPLY" = 3 ]; then
-                sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/
+                sudo nixos-rebuild switch --flake ~/.zentag-nix-config/
                 home-manager switch --flake ~/.zentag-nix-config/
         fi
         read -rp "Name of git commit (or enter for no commit): " name
