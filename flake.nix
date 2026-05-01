@@ -8,22 +8,31 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf.url = "path:./nvf";
+    nvf.url = "github:notashelf/nvf";
     frc.url = "github:frc4451/frc-nix";
   };
   outputs = {
     self,
     nixpkgs,
-    musnix,
     home-manager,
     nvf,
     frc,
     ...
-  } @ inputs: let
+  }: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system}.extend frc.overlays.default;
+    pkgs = nixpkgs.legacyPackages.${system};
     lib = nixpkgs.lib;
   in {
+    packages.x86_64-linux = {
+      zvim =
+        (nvf.lib.neovimConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [
+            ./nvf
+          ];
+        })
+      .neovim;
+    };
     nixosConfigurations = {
       zens-good-laptop = lib.nixosSystem {
         inherit system;
@@ -31,8 +40,8 @@
           ./hosts/hp
         ];
         specialArgs = {
-          inherit nvf;
           inherit frc;
+          inherit self;
         };
       };
     };

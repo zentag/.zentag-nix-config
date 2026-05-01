@@ -1,10 +1,11 @@
 {
   pkgs,
-  nvf,
+  self,
   frc,
   ...
-}: {
-  nixpkgs.overlays = [frc.overlays.default];
+}: let
+  frcpkgs = frc.packages.${pkgs.stdenv.hostPlatform.system};
+in {
   # fix 90s hang on shutdown
   virtualisation.docker.liveRestore = false;
   # nix search wget
@@ -17,16 +18,21 @@
     eza
     fastfetch
     fd
+    frcpkgs.advantagescope
+    frcpkgs.choreo
+    frcpkgs.elastic-dashboard
+    frcpkgs.sysid
+    frcpkgs.wpical
     fzf
     gh
     git
     gnome-network-displays
     gnome-remote-desktop
-    nvf.packages.${stdenv.hostPlatform.system}.default
     nodejs
     pciutils
     quickemu
     ripgrep
+    self.packages.${pkgs.stdenv.hostPlatform.system}.zvim
     silver-searcher
     tlrc
     usbutils
@@ -37,8 +43,6 @@
   ];
   programs.vscode = {
     enable = true;
-    extensions = [pkgs.
-    vscode-extensions.wpilibsuite.vscode-wpilib];
   };
   nix.settings.experimental-features = [
     "nix-command"

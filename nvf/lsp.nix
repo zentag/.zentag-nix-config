@@ -4,6 +4,7 @@
       enable = true;
       formatOnSave = true;
       trouble.enable = true;
+      presets.tailwindcss-language-server.enable = true;
     };
     languages = {
       enableFormat = true;
@@ -23,8 +24,7 @@
       };
       nix.enable = true;
       rust.enable = true;
-      tailwind.enable = true;
-      ts.enable = true;
+      typescript.enable = true;
       typst.enable = true;
       yaml.enable = true;
     };
