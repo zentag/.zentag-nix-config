@@ -44,10 +44,6 @@ in {
   programs.vscode = {
     enable = true;
   };
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 
   nix = {
     optimise.automatic = true;
@@ -55,6 +51,16 @@ in {
       automatic = true;
       dates = "daily";
       options = "--delete-older-than 30d";
+    };
+    settings = {
+      substitubers = ["https://nix-community.cachix.org"];
+      trsuted-public-keys = [
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
   };
   # Bootloader.
