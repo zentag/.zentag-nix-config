@@ -24,4 +24,5 @@ select mode in "Configure HM" "Configure Nixos" "Both"; do
         # this gets rid of shellcheck warning that it can't follow the new source
         # shellcheck disable=SC1090
         source ~/.zshrc &>/dev/null
+        exit
 done
