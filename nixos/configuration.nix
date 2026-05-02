@@ -31,6 +31,7 @@ in {
     gnome-remote-desktop
     nodejs
     pciutils
+    pnpm
     quickemu
     ripgrep
     self.packages.${pkgs.stdenv.hostPlatform.system}.zvim
