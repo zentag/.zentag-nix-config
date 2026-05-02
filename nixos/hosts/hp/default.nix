@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    ../../nixos
+    ../../default.nix
   ];
   users.users = {
     zen = {
@@ -19,7 +18,5 @@
         #  thunderbird
       ];
     };
-
   };
-
 }

@@ -1,10 +1,8 @@
 {
-  config,
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   options.customOpts = {
     tmux.enable = lib.mkEnableOption {
       default = true;

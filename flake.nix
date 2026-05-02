@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    musnix.url = "github:musnix/musnix";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +20,7 @@
   }: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    lib = nixpkgs.lib;
+    inherit (nixpkgs) lib;
   in {
     packages.x86_64-linux = {
       zvim =
@@ -37,7 +36,7 @@
       zens-good-laptop = lib.nixosSystem {
         inherit system;
         modules = [
-          ./hosts/hp
+          ./nixos/hosts/hp
         ];
         specialArgs = {
           inherit frc;
