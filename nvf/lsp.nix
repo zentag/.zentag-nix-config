@@ -18,6 +18,7 @@
       css.enable = true;
       go.enable = true;
       html.enable = true;
+      java.enable = true;
       lua.enable = true;
       markdown = {
         enable = true;
