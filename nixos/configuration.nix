@@ -26,6 +26,7 @@ in {
     fzf
     gh
     git
+    glab
     gnome-network-displays
     gnome-remote-desktop
     nodejs
