@@ -9,6 +9,10 @@
     statusline.lualine = {
       enable = true;
     };
-    mini.icons.enable = true;
+    mini = {
+      icons.enable = true;
+      notify.enable = true;
+    };
+    git.gitsigns.enable = true;
   };
 }

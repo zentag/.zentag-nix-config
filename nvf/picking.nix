@@ -1,7 +1,9 @@
 {
   vim = {
-    mini.pick.enable = true;
-    mini.files.enable = true;
-    telescope.enable = true;
+    mini = {
+      pick.enable = true;
+      files.enable = true;
+      extra.enable = true;
+    };
   };
 }
