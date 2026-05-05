@@ -1,5 +1,11 @@
-{
+{pkgs, ...}: {
   vim = {
+    extraPlugins = {
+      tiny-inline-diagnostics = {
+        package = pkgs.vimPlugins.tiny-inline-diagnostic-nvim;
+        setup = "require('tiny-inline-diagnostic').setup()";
+      };
+    };
     lsp = {
       enable = true;
       formatOnSave = true;
