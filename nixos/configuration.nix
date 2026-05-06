@@ -29,6 +29,7 @@ in {
     glab
     gnome-network-displays
     gnome-remote-desktop
+    kitty
     nodejs
     pciutils
     pnpm
