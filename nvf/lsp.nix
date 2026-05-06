@@ -34,6 +34,7 @@
       typescript.enable = true;
       typst.enable = true;
       yaml.enable = true;
+      zig.enable = true;
     };
   };
 }

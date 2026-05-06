@@ -41,6 +41,7 @@ in {
     w3m
     wl-clipboard
     yarn
+    zig
     zoxide
   ];
   programs.vscode = {
