@@ -33,6 +33,7 @@
       rust.enable = true;
       typescript.enable = true;
       typst.enable = true;
+      typst.extensions.typst-preview-nvim.enable = true;
       yaml.enable = true;
       zig.enable = true;
     };
