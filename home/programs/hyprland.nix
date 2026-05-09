@@ -5,6 +5,9 @@
     settings = {
       "$terminal" = "ghostty";
       "$mod" = "SUPER";
+      monitor = [
+        "eDP-1, 1920x1080, 0x0, 1"
+      ];
       bind =
         [
           "$mod, C, exec, chromium"
@@ -28,10 +31,10 @@
         );
     };
   };
-  home.sessionVariables = {
-    GDK_SCALE = "1.5";
-    GDK_DPI_SCALE = "0.6667";
-    QT_SCALE_FACTOR = "1.5";
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-  };
+  # home.sessionVariables = {
+  #   GDK_SCALE = "1.5";
+  #   GDK_DPI_SCALE = "0.6667";
+  #   QT_SCALE_FACTOR = "1.5";
+  #   QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+  # };
 }
