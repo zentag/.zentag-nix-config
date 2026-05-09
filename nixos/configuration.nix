@@ -52,6 +52,10 @@ in {
     hyprland.enable = true;
     hyprland.xwayland.enable = true;
   };
+  fonts.packages = with pkgs; [
+    fira-code
+    noto-fonts
+  ];
   nix = {
     optimise.automatic = true;
     gc = {
