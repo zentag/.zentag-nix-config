@@ -50,6 +50,7 @@ in {
   programs = {
     zsh.enable = true;
     hyprland.enable = true;
+    hyprland.xwayland.enable = true;
   };
   nix = {
     optimise.automatic = true;
