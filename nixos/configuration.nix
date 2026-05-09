@@ -48,10 +48,8 @@ in {
   ];
 
   programs = {
-    hyprland = {
-      enable = true;
-    };
     zsh.enable = true;
+    hyprland.enable = true;
   };
   nix = {
     optimise.automatic = true;
@@ -113,6 +111,7 @@ in {
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
+
   services = {
     flatpak.enable = true;
     # Enable the GNOME login system but use hyprland (see programs)
