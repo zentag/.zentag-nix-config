@@ -45,6 +45,7 @@ in {
     w3m
     wl-clipboard
     yarn
+    yazi
     zig
     zoxide
   ];
