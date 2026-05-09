@@ -3,7 +3,11 @@
     enable = true;
 
     settings = {
-      terminal = "ghostty";
+      "$terminal" = "ghostty";
+      "$mod" = "SUPER";
+      bind = [
+        "$mod, C, exec, chromium"
+      ];
     };
   };
 }
