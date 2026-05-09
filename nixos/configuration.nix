@@ -46,10 +46,13 @@ in {
     zig
     zoxide
   ];
-  programs.vscode = {
-    enable = true;
-  };
 
+  programs = {
+    hyprland = {
+      enable = true;
+    };
+    zsh.enable = true;
+  };
   nix = {
     optimise.automatic = true;
     gc = {
@@ -112,9 +115,9 @@ in {
   };
   services = {
     flatpak.enable = true;
-    # Enable the GNOME Desktop Environment.
+    # Enable the GNOME login system but use hyprland (see programs)
     displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+
     xrdp = {
       enable = true;
       openFirewall = true;
@@ -165,7 +168,6 @@ in {
   # xserver.libinput.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  programs.zsh.enable = true;
   environment.pathsToLink = ["/share/zsh"];
 
   users.defaultUserShell = pkgs.zsh;
