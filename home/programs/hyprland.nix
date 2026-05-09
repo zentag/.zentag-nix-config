@@ -7,6 +7,8 @@
       "$mod" = "SUPER";
       bind = [
         "$mod, C, exec, chromium"
+        "$mod, Q, killactive"
+        "$mod, T, exec, $terminal"
       ];
     };
   };
