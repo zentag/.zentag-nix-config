@@ -49,8 +49,10 @@ in {
 
   programs = {
     zsh.enable = true;
-    hyprland.enable = true;
-    hyprland.xwayland.enable = true;
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
   };
   fonts.packages = with pkgs; [
     fira-code
