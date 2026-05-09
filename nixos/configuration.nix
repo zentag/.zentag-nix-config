@@ -25,11 +25,12 @@ in {
     frcpkgs.wpical
     fzf
     gh
+    ghostty
     git
     glab
     gnome-network-displays
     gnome-remote-desktop
-    kitty
+    nim
     nodejs
     pciutils
     pnpm

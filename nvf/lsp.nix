@@ -29,6 +29,7 @@
       markdown = {
         enable = true;
       };
+      nim.enable = true;
       nix.enable = true;
       rust.enable = true;
       typescript.enable = true;
