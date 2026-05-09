@@ -12,6 +12,7 @@ in {
   environment.systemPackages = with pkgs; [
     android-tools
     bat
+    bluetui
     btop
     delta
     dust
