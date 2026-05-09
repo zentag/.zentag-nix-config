@@ -49,6 +49,7 @@ in {
 
   programs = {
     zsh.enable = true;
+    xwayland.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
