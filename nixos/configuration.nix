@@ -31,6 +31,7 @@ in {
     glab
     gnome-network-displays
     gnome-remote-desktop
+    hyprlauncher
     nim
     nodejs
     pciutils

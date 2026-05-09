@@ -5,7 +5,6 @@
   home.username = "zen";
   home.homeDirectory = "/home/zen";
   customOpts = {
-    gnome.enable = true;
     zsh.enable = true;
     tmux.enable = true;
     pkgGroups = {
