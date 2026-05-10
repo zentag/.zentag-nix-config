@@ -36,10 +36,16 @@
         );
     };
   };
-  # home.sessionVariables = {
-  #   GDK_SCALE = "1.5";
-  #   GDK_DPI_SCALE = "0.6667";
-  #   QT_SCALE_FACTOR = "1.5";
-  #   QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-  # };
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      wallpaper = [
+        {
+          monitor = "eDP-1";
+          path = "~/.zentag-nix-config/wallpapers";
+          timeout = 60;
+        }
+      ];
+    };
+  };
 }
