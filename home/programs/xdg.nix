@@ -6,13 +6,11 @@
         xdg-desktop-portal
         xdg-desktop-portal-hyprland
         xdg-desktop-portal-termfilechooser
+        xdg-desktop-portal-gtk
       ];
       config = {
         common = {
-          default = "hyprland";
-        };
-        hyprland = {
-          default = ["hyprland"];
+          default = ["hyprland" "gtk"];
           "org.freedesktop.impl.portal.FileChooser" = ["termfilechooser"];
           "org.freedesktop.impl.portal.OpenURI" = ["termfilechooser"];
         };
