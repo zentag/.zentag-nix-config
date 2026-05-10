@@ -1,4 +1,14 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
+  home.activation.createPortalDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p $HOME/.local/state/xdg-desktop-portal-termfilechooser
+    if [ ! -s $HOME/.local/state/xdg-desktop-portal-termfilechooser/last_dir ]; then
+      echo "$HOME" > $HOME/.local/state/xdg-desktop-portal-termfilechooser/last_dir
+    fi
+  '';
   xdg = {
     portal = {
       enable = true;
@@ -6,13 +16,11 @@
         xdg-desktop-portal
         xdg-desktop-portal-hyprland
         xdg-desktop-portal-termfilechooser
-        xdg-desktop-portal-gtk
       ];
       config = {
         common = {
-          default = ["hyprland" "gtk"];
+          default = ["hyprland"];
           "org.freedesktop.impl.portal.FileChooser" = ["termfilechooser"];
-          "org.freedesktop.impl.portal.OpenURI" = ["termfilechooser"];
         };
       };
     };
