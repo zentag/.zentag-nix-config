@@ -27,7 +27,7 @@
           cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
           default_dir=$HOME/downloads
           create_help_file=1
-          env=TERMCMD='kitty --title filechooser'
+          env=TERMCMD='ghostty --title="filechooser" -e'
           env=PATH="$PATH:/run/current-system/sw/bin"
           open_mode=suggested
           save_mode=last
