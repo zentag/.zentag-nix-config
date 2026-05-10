@@ -124,8 +124,7 @@ in {
 
   services = {
     flatpak.enable = true;
-    # Enable the GNOME login system but use hyprland (see programs)
-    displayManager.gdm.enable = true;
+    displayManager.ly.enable = true;
 
     xrdp = {
       enable = true;
