@@ -61,6 +61,7 @@ in {
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal
+      xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-termfilechooser
     ];
@@ -69,7 +70,9 @@ in {
         default = "hyprland";
       };
       hyprland = {
+        default = ["hyprland" "termfilechooser" "gtk"];
         "org.freedesktop.impl.portal.FileChooser" = ["termfilechooser"];
+        "org.freedesktop.impl.portal.OpenURI" = ["termfilechooser" "gtk"];
       };
     };
   };
