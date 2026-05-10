@@ -1,7 +1,8 @@
 {
   imports = [
-    ./zsh.nix
-    ./tmux.nix
     ./hyprland.nix
+    ./tmux.nix
+    ./xdg.nix
+    ./zsh.nix
   ];
 }

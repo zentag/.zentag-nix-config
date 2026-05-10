@@ -57,24 +57,6 @@ in {
       xwayland.enable = true;
     };
   };
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-termfilechooser
-    ];
-    config = {
-      common = {
-        default = "hyprland";
-      };
-      hyprland = {
-        default = ["hyprland" "termfilechooser"];
-        "org.freedesktop.impl.portal.FileChooser" = ["termfilechooser"];
-        "org.freedesktop.impl.portal.OpenURI" = ["termfilechooser"];
-      };
-    };
-  };
   fonts.packages = with pkgs; [
     fira-code
     noto-fonts
