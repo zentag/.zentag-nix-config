@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -18,7 +18,7 @@
           "$mod, C, exec, chromium"
           "$mod, Q, killactive"
           "$mod, T, exec, $terminal"
-          "$mod SHIFT, S, exec, shutdown"
+          "$mod SHIFT, S, exec, hyprshutdown"
           "$mod SHIFT, R, exec, reboot"
           "$mod, H, movefocus, l"
           "$mod, J, movefocus, d"
@@ -36,16 +36,28 @@
         );
     };
   };
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      wallpaper = [
-        {
-          monitor = "eDP-1";
-          path = "~/.zentag-nix-config/wallpapers";
-          timeout = 60;
-        }
-      ];
+
+  home.packages = with pkgs; [
+    hyprshutdown
+  ];
+  services = {
+    hyprpaper = {
+      enable = true;
+      settings = {
+        wallpaper = [
+          {
+            monitor = "eDP-1";
+            path = "~/.zentag-nix-config/wallpapers";
+            timeout = 60;
+          }
+        ];
+      };
+    };
+    hypridle = {
+      enable = true;
+    };
+    hyprsunset = {
+      enable = true;
     };
   };
 }

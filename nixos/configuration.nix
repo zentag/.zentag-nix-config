@@ -124,8 +124,8 @@ in {
 
   services = {
     flatpak.enable = true;
-    displayManager.ly.enable = true;
 
+    displayManager.ly.enable = true;
     xrdp = {
       enable = true;
       openFirewall = true;
