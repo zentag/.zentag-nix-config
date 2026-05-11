@@ -96,7 +96,7 @@
       settings = {
         profile = [
           {
-            temperature = 4000;
+            temperature = 3000;
           }
         ];
       };
