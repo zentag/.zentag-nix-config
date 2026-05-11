@@ -69,6 +69,13 @@
     };
     hyprsunset = {
       enable = true;
+      settings = {
+        profile = [
+          {
+            temperature = 4000;
+          }
+        ];
+      };
     };
   };
 }
