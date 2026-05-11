@@ -20,7 +20,7 @@
           "$mod, T, exec, $terminal"
           "$mod SHIFT, S, exec, hyprshutdown --post-cmd 'shutdown -P 0'"
           "$mod SHIFT, R, exec, hyprshutdown -t 'Restarting...'--post-cmd 'reboot'"
-          "$mod SHIFT, H, exec, systemctl hibernate"
+          "$mod SHIFT, N, exec, systemctl hibernate"
           "$mod, H, movefocus, l"
           "$mod, J, movefocus, d"
           "$mod, K, movefocus, u"
