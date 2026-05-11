@@ -64,9 +64,6 @@
         ];
       };
     };
-    hypridle = {
-      enable = true;
-    };
     hyprsunset = {
       enable = true;
       settings = {
