@@ -71,6 +71,9 @@
           modules-right = [
             "battery"
           ];
+          clock = {
+            timezone = "America/Indiana/Indianapolis";
+          };
         };
       };
     };
