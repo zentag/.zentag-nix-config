@@ -20,11 +20,20 @@
           "$mod, T, exec, $terminal"
           "$mod SHIFT, S, exec, hyprshutdown --post-cmd 'shutdown -P 0'"
           "$mod SHIFT, R, exec, hyprshutdown -t 'Restarting...'--post-cmd 'reboot'"
-          "$mod SHIFT, H, exec, systemd hibernate"
+          "$mod SHIFT, H, exec, systemctl hibernate"
           "$mod, H, movefocus, l"
           "$mod, J, movefocus, d"
           "$mod, K, movefocus, u"
           "$mod, L, movefocus, r"
+          "$mod SHIFT, H, resizeactive, -10 0"
+          "$mod SHIFT, J, resizeactive, 0 10"
+          "$mod SHIFT, K, resizeactive, 0 -10"
+          "$mod SHIFT, L, resizeactive, 10 0"
+          ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+          ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+          ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+          ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+ "
+          ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%- "
         ]
         ++ (
           builtins.concatLists (builtins.genList (i: let
@@ -40,6 +49,7 @@
 
   home.packages = with pkgs; [
     hyprshutdown
+    brightnessctl
   ];
   services = {
     hyprpaper = {
