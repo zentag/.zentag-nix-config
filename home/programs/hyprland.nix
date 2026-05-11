@@ -51,6 +51,11 @@
     hyprshutdown
     brightnessctl
   ];
+  programs = {
+    waybar = {
+      enable = true;
+    };
+  };
   services = {
     hyprpaper = {
       enable = true;
