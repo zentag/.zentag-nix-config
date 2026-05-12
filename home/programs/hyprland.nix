@@ -9,10 +9,9 @@
         "eDP-1, 1920x1080, 0x0, 1"
       ];
       "exec-once" = [
-        "[workspace 1] chromium"
+        "[workspace 1] $terminal"
         "[workspace 2 silent] $terminal"
-        "[workspace 3 silent] $terminal"
-        "[workspace 4 silent] $terminal"
+        "[workspace 3 silent] chromium"
       ];
       bind =
         [
