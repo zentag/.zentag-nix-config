@@ -10,7 +10,6 @@
       ];
       "exec-once" = [
         "[workspace 1] $terminal"
-        "[workspace 2 silent] $terminal"
         "[workspace 3 silent] chromium"
       ];
       bind =

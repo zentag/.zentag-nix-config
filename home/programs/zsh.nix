@@ -37,7 +37,7 @@
           idf = "~/.zentag-nix-config/helpers/idf.sh";
           kali = "quickemu --vm kali-kali-weekly.conf --display spice";
           ls = "eza --width=75 --hyperlink --color=always --git --icons=always";
-          n = "nvim";
+          n = "~/.zentag-nix-config/helpers/neovim.sh";
           update = "~/.zentag-nix-config/helpers/update.sh";
           update-lock = "cd ~/.zentag-nix-config/ && nix flake update";
           update-sys = "sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/";
