@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 select mode in "Configure HM" "Configure Nixos" "Both"; do
         cd ~/.zentag-nix-config/ || exit
-        ~/.zentag-nix-config/helpers/neovim.sh .
+        ~/.zentag-nix-config/helpers/neovim.sh ~/.zentag-nix-config
         git add .
         if [ "$REPLY" = 1 ]; then
                 home-manager switch --flake ~/.zentag-nix-config/
