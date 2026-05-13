@@ -16,7 +16,7 @@
         [
           "$mod, S, exec, hyprlauncher"
           "$mod, C, exec, chromium"
-          "$mod, Q, killactive"
+          "$mod, Q, exec, ~/.zentag-nix-config/helpers/closewindow.sh"
           "$mod, T, exec, $terminal"
           "$mod SHIFT, S, exec, hyprshutdown --post-cmd 'shutdown -P 0'"
           "$mod SHIFT, R, exec, hyprshutdown -t 'Restarting...' --post-cmd 'reboot'"

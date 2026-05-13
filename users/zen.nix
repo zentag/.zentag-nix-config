@@ -6,7 +6,6 @@
   home.homeDirectory = "/home/zen";
   customOpts = {
     zsh.enable = true;
-    tmux.enable = true;
     pkgGroups = {
       music = true;
       office = true;
