@@ -4,6 +4,14 @@
 select mode in "Configure HM" "Configure Nixos" "Both"; do
         cd ~/.zentag-nix-config/ || exit
         ~/.zentag-nix-config/helpers/neovim.sh ~/.zentag-nix-config
+        sleep 2
+        while true; do
+                if [ "$(hyprctl activeworkspace | head -n 1 | cut -c 14)" = "1" ]; then
+                        configuring=false
+                        break
+                fi
+        done
+
         git add .
         if [ "$REPLY" = 1 ]; then
                 home-manager switch --flake ~/.zentag-nix-config/
