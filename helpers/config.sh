@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 select mode in "Configure HM" "Configure Nixos" "Both"; do
         cd ~/.zentag-nix-config/ || exit
-        if ! hyprctl clients | grep /home/zen/.zentag-nix-config; then
+        if ! hyprctl clients | grep /home/zen/.zentag-nix-config >/dev/null; then
                 ~/.zentag-nix-config/helpers/neovim.sh ~/.zentag-nix-config
         else
                 hyprctl dispatch focuswindow title:/home/zen/.zentag-nix-config

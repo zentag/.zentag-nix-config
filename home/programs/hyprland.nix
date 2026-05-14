@@ -49,33 +49,6 @@
     hyprshutdown
     brightnessctl
   ];
-  programs = {
-    waybar = {
-      enable = true;
-      settings = {
-        mainBar = {
-          layer = "top";
-          position = "top";
-          height = 30;
-          output = [
-            "eDP-1"
-          ];
-          modules-left = [
-            "hyprland/workspaces"
-          ];
-          modules-center = [
-            "clock"
-          ];
-          modules-right = [
-            "battery"
-          ];
-          clock = {
-            timezone = "America/Indiana/Indianapolis";
-          };
-        };
-      };
-    };
-  };
   services = {
     hyprpaper = {
       enable = true;
@@ -83,7 +56,7 @@
         wallpaper = [
           {
             monitor = "eDP-1";
-            path = "~/.zentag-nix-config/wallpapers";
+            path = "~/.zentag-nix-config/wallpapers/2293c8ae94f221d748111412ecf1d3.jpg";
             timeout = 60;
           }
         ];

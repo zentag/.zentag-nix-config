@@ -125,7 +125,12 @@ in {
   services = {
     flatpak.enable = true;
 
-    displayManager.ly.enable = true;
+    displayManager.ly = {
+      enable = true;
+      settings = {
+        bigclock = "en";
+      };
+    };
     xrdp = {
       enable = true;
       openFirewall = true;
