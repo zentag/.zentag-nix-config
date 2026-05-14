@@ -29,7 +29,6 @@ select mode in "Configure HM" "Configure Nixos" "Both"; do
                 fi
         fi
         if $errored; then
-                echo hi
                 ~/.zentag-nix-config/helpers/config.sh
                 exit
         fi
@@ -37,6 +36,9 @@ select mode in "Configure HM" "Configure Nixos" "Both"; do
         if [ "$name" != "" ]; then
                 git -C ~/.zentag-nix-config/ commit -m "$name"
                 git -C ~/.zentag-nix-config/ push origin
+        else
+                ~/.zentag-nix-config/helpers/config.sh
+                exit
         fi
         # this gets rid of shellcheck warning that it can't follow the new source
         # shellcheck disable=SC1090
