@@ -27,6 +27,7 @@
       style = ''
         * {
                 font-family: Fira Code;
+                color: white;
         }
         window#waybar {
                 background: transparent;
@@ -34,11 +35,15 @@
         .modules-left,
         .modules-center,
         .modules-right {
-                background-color: background;
+                background-color: black;
                 border-radius: 20px;
                 padding: 0px 5px;
-                margin: 10px 5px;
-                min-height: 30px;
+                margin-top: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
+        }
+        #clock {
+                padding: 0 15px;
         }
       '';
     };

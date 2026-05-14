@@ -31,6 +31,8 @@
           "$mod SHIFT, L, resizeactive, 10 0"
           ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
           ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+          "CTRL,2, exec, brightnessctl -e4 -n2 set 5%-"
+          "CTRL,3, exec, brightnessctl -e4 -n2 set 5%+"
           ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ]
         ++ (
