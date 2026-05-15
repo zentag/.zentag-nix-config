@@ -32,6 +32,7 @@
       };
       nim.enable = true;
       nix.enable = true;
+      odin.enable = true;
       rust.enable = true;
       typescript.enable = true;
       typst.enable = true;
