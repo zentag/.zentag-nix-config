@@ -16,6 +16,7 @@
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
+      enableDAP = true;
 
       # Nix language and diagnostics.
       astro.enable = true;
