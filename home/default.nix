@@ -52,6 +52,7 @@ in {
         if pkgGrps.programming
         then [
           arduino-ide
+          odin
           prettierd
           python3
           supabase-cli
