@@ -25,5 +25,10 @@
       action = "<cmd>lua MiniFiles.open()<CR>";
       mode = "n";
     }
+    {
+      key = "gd";
+      action = "<cmd>lua vim.lsp.buf.definition()<CR>";
+      mode = "n";
+    }
   ];
 }
