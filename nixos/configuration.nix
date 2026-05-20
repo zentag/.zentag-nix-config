@@ -32,6 +32,7 @@ in {
     gnome-network-displays
     gnome-remote-desktop
     hyprlauncher
+    jre25_minimal
     nim
     nodejs
     pciutils
