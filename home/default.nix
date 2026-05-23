@@ -52,6 +52,7 @@ in {
         if pkgGrps.programming
         then [
           arduino-ide
+          hexedit
           odin
           prettierd
           python3
