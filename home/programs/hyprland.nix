@@ -12,6 +12,7 @@
         "[workspace 1] $terminal"
         "[workspace 3 silent] chromium"
       ];
+      "ecosystem:no_update_news" = true;
       bind =
         [
           "$mod, S, exec, hyprlauncher"
