@@ -59,7 +59,7 @@
         wallpaper = [
           {
             monitor = "eDP-1";
-            path = "~/.zentag-nix-config/wallpapers/2293c8ae9c94f221d748111412ecf1d3.jpg";
+            path = "~/.zentag-nix-config/wallpapers/10002414.jpg";
             timeout = 60;
           }
         ];

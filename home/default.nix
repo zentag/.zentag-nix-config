@@ -59,6 +59,7 @@ in {
           python3
           supabase-cli
           turso-cli
+          wget
           gradle
           jdk17_headless
         ]
