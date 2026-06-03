@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
-
+    configType = "hyprlang";
     settings = {
       "$terminal" = "ghostty";
       "$mod" = "SUPER";
