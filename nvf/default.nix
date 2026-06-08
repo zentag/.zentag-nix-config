@@ -6,6 +6,7 @@
     ./lsp.nix
     ./keymaps.nix
     ./highlighting.nix
+    ./startup.nix
     ./text-processing.nix
     ./picking.nix
   ];
