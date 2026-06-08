@@ -32,6 +32,7 @@ in {
     gnome-network-displays
     gnome-remote-desktop
     hyprlauncher
+    impala
     jre25_minimal
     nim
     nodejs
@@ -97,11 +98,8 @@ in {
   '';
   networking = {
     hostName = "zens-good-laptop"; # Define your hostname.
-    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     # Enable networking
-    networkmanager.enable = true;
-    networkmanager.wifi.backend = "iwd";
-
+    wireless.iwd.enable = true;
     firewall.enable = false;
   };
   # Set your time zone.
