@@ -45,7 +45,6 @@ in {
           lolcat
           prismlauncher
           toipe
-          betternmtui
         ]
         else []
       )

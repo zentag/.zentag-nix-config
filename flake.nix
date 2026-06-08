@@ -37,6 +37,15 @@
         inherit system;
         modules = [
           ./nixos/hosts/hp
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+
+              users.zen = import ./users/zen.nix;
+            };
+          }
         ];
         specialArgs = {
           inherit frc;
