@@ -31,6 +31,7 @@
       };
       nim.enable = true;
       nix.enable = true;
+      nix.lsp.servers = ["nixd"];
       odin.enable = true;
       rust.enable = true;
       typescript.enable = true;
