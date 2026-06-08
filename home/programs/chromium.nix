@@ -2,8 +2,10 @@
   programs.chromium = {
     enable = true;
     extensions = [
+      "bnjjngeaknajbdcgpfkgnonkmififhfo"
       "cjpalhdlnbpafiamejdnhcphjbkeiagm"
       "dbepggeogbaibhgnhhndojpepiihcmeb"
+      "ddkjiahejlhfcafbddmgiahcphecmpfh"
       "djflhoibgkdhkhhcedjiklpkjnoahfmg"
       "eimadpbcbfnmbkopoojfekhnkhdbieeh"
       "ganlcelmnoaidpmaegcmhecolonfmffk"
@@ -12,7 +14,6 @@
       "icpgjfneehieebagbmdbhnlpiopdcmna"
       "mmmomengbindngnkjblabjebdfmaiccj"
       "nngceckbapebfimnlniiiahkandclblb"
-      "bnjjngeaknajbdcgpfkgnonkmififhfo"
     ];
   };
 }
