@@ -12,12 +12,12 @@
     }
     {
       key = "<leader>f";
-      action = "<cmd>Pick files<CR>";
+      action = "<cmd>lua require('telescope.builtin').find_files<CR>";
       mode = "n";
     }
     {
       key = "<leader>g";
-      action = "<cmd>Pick grep_live<CR>";
+      action = "<cmd>lua require('telescope.builtin').live_grep<CR>";
       mode = "n";
     }
     {
