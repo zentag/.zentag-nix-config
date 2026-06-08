@@ -40,7 +40,6 @@ in {
     quickemu
     ripgrep
     self.packages.${pkgs.stdenv.hostPlatform.system}.zvim
-    silver-searcher
     tlrc
     usbutils
     w3m
