@@ -9,7 +9,6 @@
     lsp = {
       enable = true;
       formatOnSave = true;
-      trouble.enable = true;
       presets.tailwindcss-language-server.enable = true;
     };
     languages = {

@@ -4,12 +4,7 @@
     vendoredKeymaps.enable = false;
     keymaps = [
       {
-        action = "<cmd>Trouble diagnostics<CR>";
-        key = "<leader>td";
-        mode = "n";
-      }
-      {
-        action = "<cmd>Trouble todo<CR>";
+        action = "<cmd>TodoTelescope<CR>";
         key = "<leader>tt";
         mode = "n";
       }
@@ -25,6 +20,7 @@
       }
     ];
     telescope.mappings = {
+      diagnostics = "<leader>d";
       findFiles = "<leader>f";
       liveGrep = "<leader>g";
       lspDocumentSymbols = "<leader>ds";
