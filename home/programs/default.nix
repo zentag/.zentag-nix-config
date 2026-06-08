@@ -1,5 +1,6 @@
 {
   imports = [
+    ./chromium.nix
     ./ghostty.nix
     ./hyprland.nix
     ./waybar.nix

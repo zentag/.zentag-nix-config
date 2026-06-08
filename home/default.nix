@@ -80,7 +80,6 @@ in {
         then [
           libreoffice
           slack
-          ungoogled-chromium
           zoom-us
         ]
         else []
