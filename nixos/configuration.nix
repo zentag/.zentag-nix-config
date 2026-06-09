@@ -98,10 +98,7 @@ in {
       powerOnBoot = true;
     };
   };
-  #TODO: figure out if something like this is necessary now that I've switched to iwd only
-  powerManagement.resumeCommands = ''
-    nmcli r wifi on
-  '';
+
   networking = {
     hostName = "zens-good-laptop";
     # use iwd for wifi (NOT wpa_supplicant or network manager)
