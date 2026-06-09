@@ -8,7 +8,7 @@
 in {
   # fix 90s hang on shutdown
   virtualisation.docker.liveRestore = false;
-  # nix search wget
+  # nix search to find packaages
   environment.systemPackages = with pkgs; [
     android-tools
     bat
@@ -52,9 +52,11 @@ in {
   ];
 
   programs = {
+    # better than bash ;)
     zsh.enable = true;
     hyprland = {
       enable = true;
+      # necessary for compatibility with apps that don't support the newer wayland protocol
       xwayland.enable = true;
     };
   };
@@ -64,48 +66,55 @@ in {
   ];
   nix = {
     optimise.automatic = true;
+    # removes no longer required derivations from nix store (garbage collection)
     gc = {
       automatic = true;
       dates = "daily";
       options = "--delete-older-than 30d";
     };
     settings = {
+      # adds community cache so things like frc-nix packages are downloaded binaries rather than built on my machine
       substituters = ["https://nix-community.cachix.org"];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
+      # everyone uses flakes nowadays :)
       experimental-features = [
         "nix-command"
         "flakes"
       ];
     };
   };
-  # Bootloader.
+  # bootloader
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
   hardware = {
     enableAllFirmware = true;
-
+    # isn't on by default for some reason...
     bluetooth = {
       enable = true;
       powerOnBoot = true;
     };
   };
+  #TODO: figure out if something like this is necessary now that I've switched to iwd only
   powerManagement.resumeCommands = ''
     nmcli r wifi on
   '';
   networking = {
-    hostName = "zens-good-laptop"; # Define your hostname.
-    # Enable networking
+    hostName = "zens-good-laptop";
+    # use iwd for wifi (NOT wpa_supplicant or network manager)
     wireless.iwd.enable = true;
+    # turn off firewall cause it gets in the way occasionally
     firewall.enable = false;
   };
-  # Set your time zone.
+
   time.timeZone = "America/Indiana/Indianapolis";
 
-  # Select internationalisation properties.
+  # select internationalisation properties.
+  # tbh this was done by the installer and I don't feel like messing with it
+  # no idea if it's really necessary
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -121,8 +130,7 @@ in {
   };
 
   services = {
-    flatpak.enable = true;
-
+    # simple tui login
     displayManager.ly = {
       enable = true;
       settings = {
@@ -130,24 +138,18 @@ in {
         background = "0x222436";
       };
     };
-    xrdp = {
-      enable = true;
-      openFirewall = true;
-      defaultWindowManager = "gnome-remote-desktop";
-    };
-
+    #TODO: readd remote desktop now that I'm off of gnome
     # Enable CUPS to print documents.
     printing.enable = true;
     avahi = {
       enable = true;
       nssmdns4 = true;
-      openFirewall = true;
     };
-
+    # easy vpn service
     tailscale = {
       enable = true;
     };
-
+    # open my computer to get ssh'd into
     openssh = {
       enable = true;
       ports = [22];
@@ -155,34 +157,33 @@ in {
         PasswordAuthentication = true;
         AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
         UseDns = true;
-        X11Forwarding = false;
         PermitRootLogin = "prohibit-password";
       };
     };
-    # Enable sound with pipewire.
+    # enable sound with pipewire.
     pulseaudio.enable = false;
     pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
+      # support apps that use pulse and jack audio
       pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
       jack.enable = true;
-
-      # use the example session manager (no others are packaged yet so this is enabled by default,
-      # no need to redefine it in your config for now)
-      #media-session.enable = true;
     };
   };
-  security.rtkit.enable = true;
-  virtualisation.docker.enable = true;
-  # Enable touchpad support (enabled default in most desktopManager).
-  # xserver.libinput.enable = true;
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  environment.pathsToLink = ["/share/zsh"];
 
+  # recommended because of pipewire, grants better performance/lower latency
+  security.rtkit.enable = true;
+
+  # allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # I like zsh :-)
   users.defaultUserShell = pkgs.zsh;
+  #TODO: see if removing this line broke anything lol
+
+  # listen to this stuff that the nixos people worked very hard on
+  # it's important!
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

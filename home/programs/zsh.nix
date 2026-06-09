@@ -1,25 +1,16 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
-  options.customOpts = {
-    zsh.enable = lib.mkEnableOption {
-      description = "use zsh as default shell";
-      default = true;
-    };
-  };
-
-  config = lib.mkIf config.customOpts.zsh.enable {
+{pkgs, ...}: {
+  config = {
     programs = {
+      # this runs contents of .envrc in a directory if you use direnv allow . first
       direnv = {
         enable = true;
-        enableZshIntegration = true; # see note on other shells below
+        enableZshIntegration = true;
+        # lets you have 'use flake' in .envrc to load dev shell of flake
         nix-direnv.enable = true;
       };
       zsh = {
         enable = true;
+        # these are exposed as aliases (like commands) in your terminal
         shellAliases = {
           c = "~/.zentag-nix-config/helpers/config.sh";
           cd = "z";
@@ -53,6 +44,7 @@
         enableCompletion = true;
         syntaxHighlighting.enable = true;
         plugins = [
+          # stuff for the theme I like
           {
             name = "powerlevel10k-config";
             src = ./p10k;
@@ -63,6 +55,7 @@
             src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
             file = "powerlevel10k.zsh-theme";
           }
+          # uses zsh when you run nix-shell
           {
             name = "zsh-nix-shell";
             file = "nix-shell.plugin.zsh";
@@ -73,6 +66,7 @@
               sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
             };
           }
+          # fun stuff like ctrl g h to search through git commits
           {
             name = "fzf-git-sh";
             file = "fzf-git.sh";
@@ -85,10 +79,12 @@
           }
         ];
       };
+      # fuzzy find for command history lookup using ctrl r
       fzf = {
         enable = true;
         enableZshIntegration = true;
       };
+      # using z (or cd since I aliased it above) find directories fuzzily or with abbreviations, weighted by use
       zoxide = {
         enable = true;
         enableZshIntegration = true;

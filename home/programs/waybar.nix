@@ -1,5 +1,6 @@
 {
   programs = {
+    # config for the top bar that defines modules and uses css to style
     waybar = {
       enable = true;
       settings = {

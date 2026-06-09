@@ -1,13 +1,18 @@
 {
+  # terminal emulator
   programs.ghostty = {
     enable = true;
+    # press escape to use vim motions on your commands
     installVimSyntax = true;
     settings = {
+      # get rid of annoying 'are you sure you want to close it?????'
       confirm-close-surface = false;
-      background-opacity = .6;
+      background-opacity = 0.6;
+      # use theme defined below
       theme = "tokyonight_moon";
     };
   };
+  # unfortunately this theme isn't an option in home manager, so we implement it ourselves
   home.file.".config/ghostty/themes/tokyonight_moon".text = ''
     palette = 0=#1b1d2b
     palette = 1=#ff757f

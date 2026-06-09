@@ -3,6 +3,7 @@
   lib,
   ...
 }: {
+  # all of this is to make sure I can open stuff like links and file downloads in their correct programs
   home.activation.createPortalDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
     mkdir -p $HOME/.local/state/xdg-desktop-portal-termfilechooser
     if [ ! -s $HOME/.local/state/xdg-desktop-portal-termfilechooser/last_dir ]; then
@@ -28,6 +29,7 @@
       "xdg-desktop-portal-termfilechooser/config" = {
         force = true;
         executable = true;
+        # cmd=........ sets the program to use as filechooser (that runs in terminal)
         text = ''
           [filechooser]
           cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh

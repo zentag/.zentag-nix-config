@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   imports = [
     ./hardware-configuration.nix
     ../../default.nix
@@ -8,14 +8,11 @@
       isNormalUser = true;
       description = "Zen Gunawardhana";
       extraGroups = [
-        "networkmanager"
+        # sudo privileges
         "wheel"
         "audio"
+        # for access to serial devices, in my case microcontrollers
         "dialout"
-      ];
-      packages = with pkgs; [
-        firefox
-        #  thunderbird
       ];
     };
   };

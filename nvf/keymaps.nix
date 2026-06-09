@@ -1,7 +1,8 @@
 {
   vim = {
-    # Gets rid of default values for keymaps - I want to set my own and not have the space polluted
+    # gets rid of default values for keymaps - I want to set my own and not have the space polluted
     vendoredKeymaps.enable = false;
+    # my <leader> is space
     keymaps = [
       {
         action = "<cmd>TodoTelescope<CR>";

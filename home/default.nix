@@ -8,8 +8,8 @@
 in {
   imports = [
     ./programs
-    ./dconf.nix
   ];
+  #TODO: reorganize?
   options.customOpts = {
     pkgGroups = {
       programming = lib.mkEnableOption "Add tools to enable programming";

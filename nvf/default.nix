@@ -1,4 +1,5 @@
 {
+  # never forget to add files to this import!
   imports = [
     ./completion.nix
     ./cosmetic.nix

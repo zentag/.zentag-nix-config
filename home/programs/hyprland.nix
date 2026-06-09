@@ -1,17 +1,23 @@
 {pkgs, ...}: {
+  # keyboard based navigation of windows that implements wayland
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "hyprlang";
     settings = {
       "$terminal" = "ghostty";
+      # modifier
       "$mod" = "SUPER";
+      # for my hp laptop
+      #TODO: make this change on other systems
       monitor = [
         "eDP-1, 1920x1080, 0x0, 1"
       ];
+      # open the programs how I like them on startup
       "exec-once" = [
         "[workspace 1] $terminal"
         "[workspace 3 silent] chromium"
       ];
+      # remove popup on startup
       "ecosystem:no_update_news" = true;
       bind =
         [
@@ -36,6 +42,7 @@
           "CTRL,3, exec, brightnessctl -e4 -n2 set 5%+"
           ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ]
+        # add the bindings inside the list below for each number 1-9
         ++ (
           builtins.concatLists (builtins.genList (i: let
               workspace = i + 1;
@@ -47,10 +54,9 @@
         );
     };
   };
-
+  # make sure we have the hyprshutdown package used for the keybindings above
   home.packages = with pkgs; [
     hyprshutdown
-    brightnessctl
   ];
   services = {
     hyprpaper = {
@@ -59,12 +65,14 @@
         wallpaper = [
           {
             monitor = "eDP-1";
+            # setting this to a dir will cycle through wallpapers using timeout below
             path = "~/.zentag-nix-config/wallpapers/10002414.jpg";
             timeout = 60;
           }
         ];
       };
     };
+    # blue light filter like redshift
     hyprsunset = {
       enable = true;
       settings = {
