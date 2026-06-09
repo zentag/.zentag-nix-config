@@ -6,7 +6,7 @@
     keymaps = [
       {
         action = "<cmd>TodoTelescope<CR>";
-        key = "<leader>tt";
+        key = "<leader>t";
         mode = "n";
       }
       {
