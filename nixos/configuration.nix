@@ -180,7 +180,6 @@ in {
 
   # I like zsh :-)
   users.defaultUserShell = pkgs.zsh;
-  #TODO: see if removing this line broke anything lol
 
   # listen to this stuff that the nixos people worked very hard on
   # it's important!
