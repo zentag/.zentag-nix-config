@@ -1,3 +1,4 @@
+# TODO: add obsidian with syncthing and nvim integration
 {
   description = "My system config";
 
