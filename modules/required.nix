@@ -22,7 +22,11 @@
   };
   # bootloader
   boot.loader = {
-    systemd-boot.enable = true;
+    systemd-boot = {
+      enable = true;
+      # prevents /boot from getting full and cleaner look on startup
+      configurationLimit = 10;
+    };
     efi.canTouchEfiVariables = true;
   };
   hardware = {
