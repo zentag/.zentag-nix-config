@@ -1,58 +1,7 @@
-{
-  pkgs,
-  self,
-  frc,
-  ...
-}: let
-  frcpkgs = frc.packages.${pkgs.stdenv.hostPlatform.system};
-in {
+{pkgs, ...}: {
   imports = [
     ../hosts/hp-laptop.nix
   ];
-  # fix 90s hang on shutdown
-  virtualisation.docker.liveRestore = false;
-  # nix search to find packaages
-  environment.systemPackages = with pkgs; [
-    android-tools
-    bat
-    bluetui
-    btop
-    delta
-    dust
-    eza
-    fastfetch
-    fd
-    frcpkgs.advantagescope
-    frcpkgs.choreo
-    frcpkgs.elastic-dashboard
-    frcpkgs.sysid
-    frcpkgs.wpical
-    fzf
-    gh
-    git
-    glab
-    gnome-network-displays
-    gnome-remote-desktop
-    hyprlauncher
-    impala
-    jre25_minimal
-    nim
-    nodejs
-    pciutils
-    pnpm
-    quickemu
-    ripgrep
-    self.packages.${pkgs.stdenv.hostPlatform.system}.zvim
-    tlrc
-    usbutils
-    w3m
-    wl-clipboard
-    yarn
-    yazi
-    zig
-    zoxide
-  ];
-
   fonts.packages = with pkgs; [
     fira-code
     noto-fonts

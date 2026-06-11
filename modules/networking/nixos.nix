@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options = {
@@ -11,5 +12,8 @@
       # use iwd for wifi (NOT wpa_supplicant or network manager)
       wireless.iwd.enable = config.wifi.enable;
     };
+    environment.systemPackages = lib.optionals config.wifi.enable [
+      pkgs.impala
+    ];
   };
 }
