@@ -37,7 +37,7 @@
       zens-good-laptop = lib.nixosSystem {
         inherit system;
         modules = [
-          ./nixos/hosts/hp
+          ./hosts/hp-laptop
           home-manager.nixosModules.home-manager
           {
             home-manager = {

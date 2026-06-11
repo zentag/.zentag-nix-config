@@ -2,6 +2,6 @@
   imports = [
     ../modules/networking
     ../modules/default
-    ../modules/terminal-tools
+    ../modules/terminal
   ];
 }

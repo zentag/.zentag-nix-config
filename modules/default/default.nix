@@ -2,6 +2,7 @@
   imports = [
     ./home.nix
   ];
+  nixpkgs.config.allowUnfree = true;
   nix = {
     optimise.automatic = true;
     # removes no longer required derivations from nix store (garbage collection)
