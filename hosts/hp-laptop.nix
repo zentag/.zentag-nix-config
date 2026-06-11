@@ -5,4 +5,5 @@
     ../modules/required.nix
     ../modules/graphical
   ];
+  wifi.enable = true;
 }
