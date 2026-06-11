@@ -1,5 +1,9 @@
-{
-  imports = [
-    ./nixos.nix
+{pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.bluetui
   ];
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 }
