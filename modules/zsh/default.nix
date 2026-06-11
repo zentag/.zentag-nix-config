@@ -2,8 +2,7 @@
   imports = [
     ./nixos.nix
   ];
-  # HACK: I would think this should change per machine
-  home-manager.users.zen.imports = [
+  home.imports = [
     ./home.nix
   ];
 }

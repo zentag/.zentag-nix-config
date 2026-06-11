@@ -79,6 +79,10 @@
       ];
     };
     # fuzzy find for command history lookup using ctrl r
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     # using z (or cd since I aliased it above) find directories fuzzily or with abbreviations, weighted by use
     zoxide = {
       enable = true;
