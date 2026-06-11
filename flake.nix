@@ -43,8 +43,6 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-
-              users.zen = import ./users/zen.nix;
             };
           }
         ];
@@ -54,19 +52,6 @@
         };
       };
     };
-    homeConfigurations = {
-      zen = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./users/zen.nix
-        ];
-      };
-      shell = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./users/shell.nix
-        ];
-      };
-    };
+    #TODO: export home configurations for other machines
   };
 }

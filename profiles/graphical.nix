@@ -8,9 +8,11 @@
     ../modules/ghostty
     ../modules/hyprland
     ../modules/ly
+    ../modules/office
     ../modules/printing
     ../modules/waybar
     ../modules/xdg
     ../modules/zsh
+    ../modules/zvim
   ];
 }

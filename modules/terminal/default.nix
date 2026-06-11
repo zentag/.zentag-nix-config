@@ -1,11 +1,7 @@
-{
-  pkgs,
-  self,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     bat
-    btop
+    bottom
     delta
     dust
     eza
@@ -17,10 +13,10 @@
     glab
     pciutils
     ripgrep
-    self.packages.${pkgs.stdenv.hostPlatform.system}.zvim
     tlrc
     usbutils
     w3m
+    wget
     yazi
     zoxide
   ];

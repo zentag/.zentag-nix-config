@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   services = {
     pulseaudio.enable = false;
     pipewire = {
@@ -12,4 +12,7 @@
   };
   # recommended because of pipewire, grants better performance/lower latency
   security.rtkit.enable = true;
+  environment.systemPackages = [
+    pkgs.wiremix
+  ];
 }

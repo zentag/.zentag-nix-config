@@ -2,11 +2,23 @@
   imports = [
     ./hardware-configuration.nix
     ../../profiles/graphical.nix
-    ../../modules/virtualisation
+    ../../modules/design
     ../../modules/frc
-    ../../modules/tailscale
+    ../../modules/fun
+    ../../modules/gaming
+    ../../modules/music
     ../../modules/ssh
+    ../../modules/tailscale
+    ../../modules/virtualisation
   ];
   wifi.enable = true;
   system.stateVersion = "23.11"; # absolutely do not change
+  # This value determines the Home Manager release that your configuration is
+  # compatible with. This helps avoid breakage when a new Home Manager release
+  # introduces backwards incompatible changes.
+  #
+  # You should not change this value, even if you update Home Manager. If you do
+  # want to update the value, then make sure to first check the Home Manager
+  # release notes.
+  home.home.stateVersion = "24.05"; # Please read the comment before changing.
 }
