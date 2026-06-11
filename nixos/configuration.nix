@@ -54,10 +54,6 @@ in {
     zoxide
   ];
 
-  programs = {
-    # better than bash ;)
-    zsh.enable = true;
-  };
   fonts.packages = with pkgs; [
     fira-code
     noto-fonts
