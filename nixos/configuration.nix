@@ -29,7 +29,6 @@ in {
     frcpkgs.wpical
     fzf
     gh
-    ghostty
     git
     glab
     gnome-network-displays

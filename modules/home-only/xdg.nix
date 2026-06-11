@@ -3,6 +3,7 @@
   lib,
   ...
 }: {
+  # TODO: somehow this is broken ???
   # all of this is to make sure I can open stuff like links and file downloads in their correct programs
   home.activation.createPortalDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
     mkdir -p $HOME/.local/state/xdg-desktop-portal-termfilechooser
