@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  options = {
+  options.c = {
     wifi.enable = lib.mkEnableOption "whether to use wifi on this machine";
   };
   config = {
