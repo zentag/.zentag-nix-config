@@ -4,6 +4,7 @@
     luaConfigPre = ''
       vim.g.loaded_netrw = 1
       vim.g.loaded_netrwPlugin = 1
+
     '';
     mini = {
       files = {
@@ -23,6 +24,10 @@
           setup = {fzf = {fuzzy = true;};};
         }
       ];
+    };
+    navigation.harpoon = {
+      enable = true;
+      # keymaps in keymaps.nix
     };
   };
 }

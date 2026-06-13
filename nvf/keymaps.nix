@@ -28,5 +28,13 @@
       lspWorkspaceSymbols = "<leader>ws";
       lspReferences = "<leader>r";
     };
+    navigation.harpoon.mappings = {
+      file1 = "<C-j>";
+      file2 = "<C-k>";
+      file3 = "<C-l>";
+      file4 = "<C-;>";
+      listMarks = "<leader>h";
+      markFile = "<leader>a";
+    };
   };
 }
