@@ -17,6 +17,7 @@
     home-manager,
     nvf,
     frc,
+    inputs,
     ...
   }: let
     system = "x86_64-linux";
@@ -26,7 +27,7 @@
     packages.x86_64-linux = {
       zvim =
         (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          inherit pkgs;
           modules = [
             ./nvf
           ];
@@ -52,6 +53,12 @@
         };
       };
     };
-    #TODO: export home configurations for other machines
+    homeConfigurations = {
+      dev = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs;};
+        modules = [./home/dev.nix];
+      };
+    };
   };
 }
