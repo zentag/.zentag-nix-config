@@ -29,6 +29,7 @@
       lua.enable = true;
       markdown = {
         enable = true;
+        extensions.markview.enable = true;
       };
       nim.enable = true;
       nix.enable = true;
