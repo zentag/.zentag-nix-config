@@ -4,6 +4,7 @@
 
 <details>
   <summary>click to expand</summary>
+
 ```text
 ├── flake.lock
 ├── flake.nix
@@ -33,7 +34,9 @@
     ├── someimage.jpg
     └── ... other wallpapers ...
 ```
+
 </details>
+
 ## import flow
 
 ### default.nix
