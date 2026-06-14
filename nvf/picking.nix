@@ -39,7 +39,7 @@
     extraPlugins = {
       man-nvim = {
         setup = "require('man_nvim').setup()";
-        package = man-nvim.packages.${pkgs.system}.default;
+        package = man-nvim.packages.${pkgs.stdenv.hostPlatform.system}.default;
       };
     };
   };
