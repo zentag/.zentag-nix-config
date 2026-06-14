@@ -1,5 +1,5 @@
 {
   home.imports = [./home.nix];
   # searchable man
-  documentation.man.generateCaches = true;
+  documentation.man.cache.enable = true;
 }

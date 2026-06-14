@@ -21,6 +21,7 @@
     };
     telescope = {
       enable = true;
+      #TODO: this doesn't work?
       setupOpts.pickers.find_files.hidden = true;
       extensions = [
         {

@@ -23,6 +23,7 @@
       bash.enable = true;
       clang.enable = true;
       css.enable = true;
+      gleam.enable = true;
       go.enable = true;
       html.enable = true;
       java.enable = true;
