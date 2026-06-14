@@ -8,7 +8,10 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf.url = "github:notashelf/nvf";
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     frc.url = "github:frc4451/frc-nix";
     # TODO: change once upstreamed
     man-nvim.url = "github:zentag/man.nvim/0e0ab6f4ba1f6f289ba2a5c01952438c3bbcf55b";
