@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  man-nvim,
+  ...
+}: {
   vim = {
     # disable netrw
     luaConfigPre = ''
@@ -17,6 +21,7 @@
     };
     telescope = {
       enable = true;
+      setupOpts.pickers.find_files.hidden = true;
       extensions = [
         {
           name = "fzf";
@@ -28,6 +33,13 @@
     navigation.harpoon = {
       enable = true;
       # keymaps in keymaps.nix
+    };
+
+    extraPlugins = {
+      man-nvim = {
+        setup = "require('man_nvim').setup()";
+        package = man-nvim.packages.${pkgs.system}.default;
+      };
     };
   };
 }

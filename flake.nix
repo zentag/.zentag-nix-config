@@ -10,14 +10,15 @@
     };
     nvf.url = "github:notashelf/nvf";
     frc.url = "github:frc4451/frc-nix";
+    # TODO: change once upstreamed
+    man-nvim.url = "github:zentag/man.nvim/0e0ab6f4ba1f6f289ba2a5c01952438c3bbcf55b";
   };
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
     home-manager,
     nvf,
     frc,
-    inputs,
     ...
   }: let
     system = "x86_64-linux";
@@ -28,6 +29,7 @@
       zvim =
         (nvf.lib.neovimConfiguration {
           inherit pkgs;
+          extraSpecialArgs = {inherit (inputs) man-nvim;};
           modules = [
             ./nvf
           ];
