@@ -19,6 +19,11 @@
         action = "<cmd>lua vim.lsp.buf.definition()<CR>";
         mode = "n";
       }
+      {
+        key = "<leader>n";
+        action = "<cmd>lua vim.cmd('edit ' .. vim.fn.expand('%:h') .. '/')<CR>";
+        mode = "n";
+      }
     ];
     telescope.mappings = {
       diagnostics = "<leader>d";
