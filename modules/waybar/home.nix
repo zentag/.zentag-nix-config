@@ -1,3 +1,4 @@
+# TODO: make it not ugly
 {
   programs = {
     # config for the top bar that defines modules and uses css to style
