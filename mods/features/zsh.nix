@@ -1,6 +1,8 @@
 {self, ...}: {
   flake.nixosModules.zsh = {pkgs, ...}: {
-    home-manager.sharedModules = [self.homeModules.zsh];
+    imports = [
+      (self.lib.hm "zen" "zsh")
+    ];
     programs.zsh.enable = true;
     users.defaultUserShell = pkgs.zsh;
   };

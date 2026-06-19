@@ -1,6 +1,8 @@
 {self, ...}: {
   flake.nixosModules.ghostty = {
-    home-manager.sharedModules = [self.homeModules];
+    imports = [
+      (self.lib.hm "zen" "ghostty")
+    ];
   };
   flake.homeModules.ghostty = {
     # terminal emulator

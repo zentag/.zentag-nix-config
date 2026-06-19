@@ -1,6 +1,8 @@
 {self, ...}: {
   flake.nixosModules.waybar = {
-    home-manager.sharedModules = [self.homeModules.waybar];
+    imports = [
+      (self.lib.hm "zen" "waybar")
+    ];
   };
   flake.homeModules.waybar = {
   };

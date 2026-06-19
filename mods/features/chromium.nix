@@ -1,6 +1,8 @@
 {self, ...}: {
   flake.nixosModules.chromium = {
-    home-manager.sharedModules = [self.homeModules.chromium];
+    imports = [
+      (self.lib.hm "zen" "chromium")
+    ];
   };
   flake.homeModules.chromium = {
     programs.chromium = {

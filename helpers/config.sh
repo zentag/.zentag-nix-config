@@ -17,7 +17,7 @@ done
 
 git add .
 # TODO: make this change for each system
-if ! sudo nixos-rebuild switch --flake ~/.zentag-nix-config#zens-good-laptop; then
+if ! sudo nixos-rebuild switch --flake ~/.zentag-nix-config#hp; then
         read -rp $'\nPress enter to rerun script'
         ~/.zentag-nix-config/helpers/config.sh
         exit

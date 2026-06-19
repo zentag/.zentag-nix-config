@@ -1,6 +1,8 @@
 {self, ...}: {
   flake.nixosModules.hyprland = {
-    home-manager.sharedModules = [self.homeModules.hyprland];
+    imports = [
+      (self.lib.hm "zen" "hyprland")
+    ];
     programs.hyprland = {
       enable = true;
       # necessary for compatibility with apps that don't support the newer wayland protocol

@@ -4,15 +4,17 @@
   ...
 }: {
   flake.nixosModules.frc = {
-    home-manager.sharedModules = [self.homeModules.frc];
+    imports = [
+      (self.lib.hm "zen" "frc")
+    ];
   };
   flake.homeModules.frc = {pkgs, ...}: {
-    environment.systemPackages = with inputs.frc.packages.${pkgs.stdenv.hostPlatform.system}; [
-      frcpkgs.advantagescope
-      frcpkgs.choreo
-      frcpkgs.elastic-dashboard
-      frcpkgs.sysid
-      frcpkgs.wpical
+    home.packages = with inputs.frc.packages.${pkgs.stdenv.hostPlatform.system}; [
+      advantagescope
+      choreo
+      elastic-dashboard
+      sysid
+      wpical
     ];
   };
 }

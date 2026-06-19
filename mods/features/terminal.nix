@@ -1,6 +1,8 @@
 {self, ...}: {
   flake.nixosModules.terminal = {
-    home-manager.sharedModules = [self.homeModules.terminal];
+    imports = [
+      (self.lib.hm "zen" "terminal")
+    ];
     # searchable man
     documentation.man.cache.enable = true;
   };

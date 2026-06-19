@@ -1,7 +1,9 @@
 {self, ...}: {
   #TODO: add musnix
   flake.nixosModules.music = {
-    home-manager.sharedModules = [self.homeModules.music];
+    imports = [
+      (self.lib.hm "zen" "music")
+    ];
   };
   flake.homeModules.music = {pkgs, ...}: {
     home.packages = with pkgs; [

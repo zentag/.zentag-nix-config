@@ -1,6 +1,8 @@
 {self, ...}: {
   flake.nixosModules.xdg = {
-    home-manager.sharedModules = [self.homeModules.xdg];
+    imports = [
+      (self.lib.hm "zen" "xdg")
+    ];
   };
   flake.homeModules.xdg = {
     pkgs,

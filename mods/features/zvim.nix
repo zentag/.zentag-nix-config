@@ -1,6 +1,8 @@
 {self, ...}: {
   flake.nixosModules.zvim = {pkgs, ...}: {
-    home-manager.sharedModules = [self.homeModules.zvim];
+    imports = [
+      (self.lib.hm "zen" "zvim")
+    ];
     environment.systemPackages = [
       self.packages.${pkgs.stdenv.hostPlatform.system}.zvim
     ];
