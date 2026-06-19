@@ -4,9 +4,9 @@
     # config for the top bar that defines modules and uses css to style
     waybar = {
       enable = true;
-      systemd.enable = false;
       settings = {
         mainBar = {
+          start_hidden = true;
           layer = "top";
           position = "top";
           height = 30;
