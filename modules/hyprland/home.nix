@@ -20,6 +20,7 @@
       # remove popup on startup
       "ecosystem:no_update_news" = true;
       group.groupbar.height = 0;
+      bindr = "$mod, Super_L, exec, pkill waybar || waybar";
       bind =
         [
           "$mod, S, exec, hyprlauncher"
