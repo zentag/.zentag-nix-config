@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   vim = {
     # gets rid of default values for keymaps - I want to set my own and not have the space polluted
     vendoredKeymaps.enable = false;
@@ -22,6 +22,11 @@
       {
         key = "<leader>n";
         action = "<cmd>lua vim.cmd('edit ' .. vim.fn.expand('%:h') .. '/')<CR>";
+        mode = "n";
+      }
+      {
+        key = "<CR>";
+        action = "<cmd>Obsidian find_files<CR>";
         mode = "n";
       }
     ];
