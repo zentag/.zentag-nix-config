@@ -6,5 +6,6 @@
       snippets.enable = true;
       surround.enable = true;
     };
+    notes.obsidian.enable = true;
   };
 }
