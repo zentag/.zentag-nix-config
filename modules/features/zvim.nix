@@ -1,7 +1,11 @@
 {self, ...}: {
-  flake.nixosModules.zvim = {pkgs, ...}: {
+  flake.nixosModules.zvim = {
+    config,
+    pkgs,
+    ...
+  }: {
     imports = [
-      (self.lib.hm "zen" "zvim")
+      (self.lib.hm config.username "zvim")
     ];
     environment.systemPackages = [
       self.packages.${pkgs.stdenv.hostPlatform.system}.zvim

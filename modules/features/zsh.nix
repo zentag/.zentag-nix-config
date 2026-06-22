@@ -1,7 +1,11 @@
 {self, ...}: {
-  flake.nixosModules.zsh = {pkgs, ...}: {
+  flake.nixosModules.zsh = {
+    config,
+    pkgs,
+    ...
+  }: {
     imports = [
-      (self.lib.hm "zen" "zsh")
+      (self.lib.hm config.username "zsh")
     ];
     programs.zsh.enable = true;
     users.defaultUserShell = pkgs.zsh;

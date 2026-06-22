@@ -3,9 +3,9 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.music = {
+  flake.nixosModules.music = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "music")
+      (self.lib.hm config.username "music")
       inputs.musnix.nixosModules.musnix
     ];
     musnix.enable = true;

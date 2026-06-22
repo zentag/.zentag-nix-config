@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.terminal = {
+  flake.nixosModules.terminal = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "terminal")
+      (self.lib.hm config.username "terminal")
     ];
     # searchable man
     documentation.man.cache.enable = true;

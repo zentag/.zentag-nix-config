@@ -1,8 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.obsidian = {
+  flake.nixosModules.obsidian = {config, ...}: {
     imports = [
-      #TODO: make string for user an option
-      (self.lib.hm "zen" "obsidian")
+      (self.lib.hm config.username "obsidian")
     ];
   };
   flake.homeModules.obsidian = {pkgs, ...}: {

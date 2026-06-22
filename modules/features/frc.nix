@@ -3,9 +3,9 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.frc = {
+  flake.nixosModules.frc = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "frc")
+      (self.lib.hm config.username "frc")
     ];
   };
   flake.homeModules.frc = {pkgs, ...}: {

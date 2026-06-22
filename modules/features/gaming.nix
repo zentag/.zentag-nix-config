@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.gaming = {
+  flake.nixosModules.gaming = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "gaming")
+      (self.lib.hm config.username "gaming")
     ];
   };
   flake.homeModules.gaming = {pkgs, ...}: {

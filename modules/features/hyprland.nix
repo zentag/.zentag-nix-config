@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.hyprland = {
+  flake.nixosModules.hyprland = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "hyprland")
+      (self.lib.hm config.username "hyprland")
     ];
     programs.hyprland = {
       enable = true;

@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.virtualisation = {
+  flake.nixosModules.virtualisation = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "virtualisation")
+      (self.lib.hm config.username "virtualisation")
     ];
   };
   flake.homeModules.virtualisation = {pkgs, ...}: {

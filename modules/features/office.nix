@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.office = {
+  flake.nixosModules.office = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "office")
+      (self.lib.hm config.username "office")
     ];
   };
   flake.homeModules.office = {pkgs, ...}: {

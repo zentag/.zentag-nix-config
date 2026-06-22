@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.ghostty = {
+  flake.nixosModules.ghostty = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "ghostty")
+      (self.lib.hm config.username "ghostty")
     ];
   };
   flake.homeModules.ghostty = {

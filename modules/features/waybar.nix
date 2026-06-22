@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.waybar = {
+  flake.nixosModules.waybar = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "waybar")
+      (self.lib.hm config.username "waybar")
     ];
   };
   flake.homeModules.waybar = {

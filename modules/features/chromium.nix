@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.chromium = {
+  flake.nixosModules.chromium = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "chromium")
+      (self.lib.hm config.username "chromium")
     ];
   };
   flake.homeModules.chromium = {

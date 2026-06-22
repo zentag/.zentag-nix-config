@@ -25,6 +25,7 @@
     ];
 
     wifi.enable = true;
+    username = "zen";
     system.stateVersion = "23.11"; # absolutely do not change
     # This value determines the Home Manager release that your configuration is
     # compatible with. This helps avoid breakage when a new Home Manager release

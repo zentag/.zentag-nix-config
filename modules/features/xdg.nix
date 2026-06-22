@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.xdg = {
+  flake.nixosModules.xdg = {config, ...}: {
     imports = [
-      (self.lib.hm "zen" "xdg")
+      (self.lib.hm config.username "xdg")
     ];
   };
   flake.homeModules.xdg = {
