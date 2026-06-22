@@ -1,7 +1,9 @@
-cd ~/.zentag-nix-config/ || exit
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")" || exit
+cd .. || exit
+
 git stash
 nix flake update
-sudo nixos-rebuild switch --flake ~/.zentag-nix-config/#hp
+sudo nixos-rebuild switch --flake .#"$(cat system.txt)"
 git add .
 git commit -m 'autoupdate'
 git push origin
