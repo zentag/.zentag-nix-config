@@ -1,7 +1,8 @@
 {self, ...}: {
   flake.homeModules.boilerplate = {lib, ...}: {
-    options.configDir = lib.mkOption {};
-    config.configDir = "~/.zentag-nix-config";
+    options.configDir = lib.mkOption {
+      default = "~/.zentag-nix-config";
+    };
   };
   flake.nixosModules.boilerplate = {
     home-manager.sharedModules = [self.homeModules.boilerplate];
