@@ -1,7 +1,7 @@
 {self, ...}: {
   flake.homeModules.boilerplate = {lib, ...}: {
     options.configDir = lib.mkOption {
-      default = "~/.zentag-nix-config";
+      default = "~/dots";
     };
   };
   flake.nixosModules.boilerplate = {
