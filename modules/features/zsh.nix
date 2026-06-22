@@ -6,7 +6,11 @@
     programs.zsh.enable = true;
     users.defaultUserShell = pkgs.zsh;
   };
-  flake.homeModules.zsh = {pkgs, ...}: {
+  flake.homeModules.zsh = {
+    pkgs,
+    config,
+    ...
+  }: {
     programs = {
       # this runs contents of .envrc in a directory if you use direnv allow . first
       direnv = {
@@ -19,7 +23,7 @@
         enable = true;
         # these are exposed as aliases (like commands) in your terminal
         shellAliases = {
-          c = "~/.zentag-nix-config/helpers/config.sh";
+          c = "${config.configDir}/helpers/config.sh";
           cd = "z";
           d = "nix develop -c $SHELL";
           ff = "fastfetch";
@@ -38,15 +42,11 @@
           gr = "git restore";
           grs = "git restore --staged";
           gs = "git status";
-          idf = "~/.zentag-nix-config/helpers/idf.sh";
+          idf = "${config.configDir}/helpers/idf.sh";
           kali = "quickemu --vm kali-kali-weekly.conf --display spice";
           ls = "eza --width=75 --hyperlink --color=always --git --icons=always";
-          n = "~/.zentag-nix-config/helpers/neovim.sh";
-          update = "~/.zentag-nix-config/helpers/update.sh";
-          update-lock = "cd ~/.zentag-nix-config/ && nix flake update";
-          update-sys = "sudo nixos-rebuild switch --upgrade --flake ~/.zentag-nix-config/";
-          update-user = "home-manager switch --flake ~/.zentag-nix-config/";
-          v = "nvim ~/vimbegood";
+          n = "${config.configDir}/helpers/neovim.sh";
+          update = "${config.configDir}/helpers/update.sh";
         };
         enableCompletion = true;
         syntaxHighlighting.enable = true;

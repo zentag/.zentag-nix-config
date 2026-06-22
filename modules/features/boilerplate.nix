@@ -1,5 +1,10 @@
-{
+{self, ...}: {
+  flake.homeModules.boilerplate = {lib, ...}: {
+    options.configDir = lib.mkOption {};
+    config.configDir = "~/.zentag-nix-config";
+  };
   flake.nixosModules.boilerplate = {
+    home-manager.sharedModules = [self.homeModules.boilerplate];
     nixpkgs.config.allowUnfree = true;
     nix = {
       optimise.automatic = true;

@@ -9,7 +9,11 @@
       xwayland.enable = true;
     };
   };
-  flake.homeModules.hyprland = {pkgs, ...}: {
+  flake.homeModules.hyprland = {
+    pkgs,
+    config,
+    ...
+  }: {
     # keyboard based navigation of windows that implements wayland
     wayland.windowManager.hyprland = {
       enable = true;
@@ -36,7 +40,7 @@
           [
             "$mod, S, exec, hyprlauncher"
             "$mod, C, exec, chromium"
-            "$mod, Q, exec, ~/.zentag-nix-config/helpers/closewindow.sh"
+            "$mod, Q, exec, ${config.configDir}/helpers/closewindow.sh"
             "$mod, T, exec, $terminal"
             "$mod, W, exec, pkill waybar --signal SIGUSR1"
             "$mod SHIFT, S, exec, hyprshutdown --post-cmd 'shutdown -P 0'"
@@ -85,7 +89,7 @@
             {
               monitor = "eDP-1";
               # setting this to a dir will cycle through wallpapers using timeout below
-              path = "~/.zentag-nix-config/wallpapers/10002414.jpg";
+              path = "${config.configDir}/wallpapers/10002414.jpg";
               timeout = 60;
             }
           ];

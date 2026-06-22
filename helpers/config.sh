@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# disable unused warning for mode (we use the number from $REPLY instead)
-# shellcheck disable=SC2034
-cd ~/.zentag-nix-config/ || exit
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")" || exit
+cd .. || exit
+
 if ! hyprctl clients | grep . >/dev/null; then
         ./helpers/neovim.sh .
 else
