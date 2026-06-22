@@ -3,7 +3,6 @@
   inputs,
   ...
 }: {
-  #TODO: add musnix
   flake.nixosModules.music = {
     imports = [
       (self.lib.hm "zen" "music")
