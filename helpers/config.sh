@@ -3,7 +3,7 @@ cd -- "$(dirname -- "${BASH_SOURCE[0]}")" || exit
 cd .. || exit
 
 if ! hyprctl clients | grep "$(pwd)" >/dev/null; then
-        ./helpers/neovim.sh .
+        ./helpers/neovim.sh "$(pwd)"
 else
         hyprctl dispatch focuswindow title:"$(pwd)"
 fi
