@@ -9,8 +9,9 @@
     lib,
     ...
   }: {
-    # TODO: somehow this is broken ???
     # all of this is to make sure I can open stuff like links and file downloads in their correct programs
+    # this makes sure termfilechooser doesn't error.
+    # it needs a last_dir file, so we create it if it doesn't exist
     home.activation.createPortalDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
       mkdir -p $HOME/.local/state/xdg-desktop-portal-termfilechooser
       if [ ! -s $HOME/.local/state/xdg-desktop-portal-termfilechooser/last_dir ]; then

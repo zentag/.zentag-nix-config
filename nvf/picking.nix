@@ -21,8 +21,8 @@
     };
     telescope = {
       enable = true;
-      #TODO: this doesn't work?
-      setupOpts.pickers.find_files.hidden = true;
+      # show files that start with . (except the .git directory)
+      setupOpts.pickers.find_files.find_command = ["fd" "--type" "f" "--hidden" "--exclude" ".git"];
       extensions = [
         {
           name = "fzf";
