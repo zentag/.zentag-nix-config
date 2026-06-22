@@ -115,17 +115,16 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1781385975,
+        "lastModified": 1782144949,
         "narHash": "sha256-h4T2Vb2LpuSQ96xpCtTe/ZbUHdBaw2Ygcg9fDMG8kMA=",
         "owner": "zentag",
         "repo": "man.nvim",
-        "rev": "0e0ab6f4ba1f6f289ba2a5c01952438c3bbcf55b",
+        "rev": "9477ccb19f169869c9d878f83abfc71720d314ea",
         "type": "github"
       },
       "original": {
         "owner": "zentag",
         "repo": "man.nvim",
-        "rev": "0e0ab6f4ba1f6f289ba2a5c01952438c3bbcf55b",
         "type": "github"
       }
     },
