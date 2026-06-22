@@ -20,6 +20,10 @@
     ];
   };
   flake.nixosModules.hp = {
+    home-manager.users.zen.monitor = [
+      "eDP-1, 1920x1080, 0x0, 1"
+    ];
+
     wifi.enable = true;
     system.stateVersion = "23.11"; # absolutely do not change
     # This value determines the Home Manager release that your configuration is
