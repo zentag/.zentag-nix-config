@@ -5,10 +5,11 @@
 }: {
   flake.nixosConfigurations.hp = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
-      hm
       graphical
-      hp-hardware
+
       hp
+      hp-hardware
+
       design
       frc
       fun
