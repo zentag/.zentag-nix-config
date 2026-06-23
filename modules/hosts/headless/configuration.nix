@@ -8,6 +8,7 @@
       server
 
       headless
+      headless-hardware
     ];
   };
   flake.nixosModules.headless = {
