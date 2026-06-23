@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     musnix.url = "github:musnix/musnix";
+    odysseus.url = "github:toyvo/odysseus/nix-add-modules";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -9,6 +9,8 @@
 
       headless
       headless-hardware
+
+      odysseus
     ];
   };
   flake.nixosModules.headless = {
