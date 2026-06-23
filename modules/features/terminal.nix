@@ -3,8 +3,6 @@
     imports = [
       (self.lib.hm config.username "terminal")
     ];
-    # searchable man
-    documentation.man.cache.enable = true;
   };
   flake.homeModules.terminal = {pkgs, ...}: {
     home.packages = with pkgs; [
