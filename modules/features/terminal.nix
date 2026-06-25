@@ -20,6 +20,7 @@
       pciutils
       ripgrep
       tlrc
+      tree
       usbutils
       w3m
       wget
