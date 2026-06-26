@@ -8,7 +8,8 @@
     home.packages = with pkgs; [
       cura-appimage
       freecad
-      kicad
+      (pkgs.kicad.override {withJava = true;})
+
       prusa-slicer
     ];
   };
